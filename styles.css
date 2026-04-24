@@ -5037,6 +5037,7 @@ a[href^="./buy-premium-plan.html"].secondary-button:focus-visible {
     top: 0;
     left: 0;
     right: 0;
+    z-index: 300;
   }
 
   .mobile-hero-brand {
