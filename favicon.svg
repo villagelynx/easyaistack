@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 72 72">
+  <defs>
+    <linearGradient id="aiStackBadge" x1="0.08" y1="0.08" x2="0.92" y2="0.92">
+      <stop offset="0%" stop-color="#59a8ff" />
+      <stop offset="55%" stop-color="#2f7cff" />
+      <stop offset="100%" stop-color="#123b9c" />
+    </linearGradient>
+    <linearGradient id="stackSide" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#98c8ff" />
+      <stop offset="100%" stop-color="#4c89ee" />
+    </linearGradient>
+    <linearGradient id="stackTop" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#f4f9ff" />
+      <stop offset="100%" stop-color="#bfdcff" />
+    </linearGradient>
+  </defs>
+
+  <rect x="6" y="6" width="60" height="60" rx="18" fill="url(#aiStackBadge)" />
+  <ellipse cx="36" cy="57" rx="18" ry="5" fill="#0c2b6e" opacity="0.26" />
+
+  <g transform="translate(0 2)">
+    <ellipse cx="36" cy="43" rx="18" ry="6.4" fill="url(#stackTop)" />
+    <path d="M18 43v8.2c0 3.6 8.1 6.4 18 6.4s18-2.8 18-6.4V43c0 3.6-8.1 6.4-18 6.4S18 46.6 18 43Z" fill="url(#stackSide)" />
+
+    <ellipse cx="36" cy="33" rx="16.8" ry="5.8" fill="url(#stackTop)" />
+    <path d="M19.2 33v7.2c0 3.2 7.5 5.8 16.8 5.8s16.8-2.6 16.8-5.8V33c0 3.2-7.5 5.8-16.8 5.8S19.2 36.2 19.2 33Z" fill="#74abff" />
+
+    <ellipse cx="36" cy="23.5" rx="15.2" ry="5.2" fill="url(#stackTop)" />
+    <path d="M20.8 23.5v6.3c0 2.9 6.8 5.2 15.2 5.2s15.2-2.3 15.2-5.2v-6.3c0 2.9-6.8 5.2-15.2 5.2s-15.2-2.3-15.2-5.2Z" fill="#8fbaff" />
+  </g>
+
+  <text x="36" y="38.5" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="800" letter-spacing="0.5" fill="#0d2f78">AI</text>
+</svg>

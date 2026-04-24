@@ -1,0 +1,89 @@
+<svg width="1500" height="980" viewBox="0 0 1500 980" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1500" height="980" fill="#E9EFFB"/>
+  <text x="750" y="78" text-anchor="middle" fill="#163983" font-family="Segoe UI, Arial, sans-serif" font-size="34" font-weight="700">ABC Company AI Stack Plan Preview</text>
+  <text x="750" y="116" text-anchor="middle" fill="#4E6694" font-family="Segoe UI, Arial, sans-serif" font-size="18">Two-page PDF-style mockup for the $29 EasyAIStack deliverable</text>
+
+  <rect x="108" y="156" width="580" height="760" rx="30" fill="#FFFFFF" stroke="#C8D6F0" stroke-width="2"/>
+  <rect x="812" y="156" width="580" height="760" rx="30" fill="#FFFFFF" stroke="#C8D6F0" stroke-width="2"/>
+
+  <rect x="148" y="196" width="500" height="154" rx="26" fill="#173D8F"/>
+  <text x="184" y="244" fill="#C9D7F8" font-family="Segoe UI, Arial, sans-serif" font-size="15" font-weight="700" letter-spacing="1.2">PREMIUM $29 PLAN</text>
+  <text x="184" y="288" fill="#FFFFFF" font-family="Segoe UI, Arial, sans-serif" font-size="33" font-weight="700">ABC Company</text>
+  <text x="184" y="325" fill="#E1EAFF" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="500">Business Classification: Agency</text>
+
+  <rect x="148" y="372" width="238" height="104" rx="22" fill="#F4F8FF" stroke="#D6E2F8"/>
+  <rect x="408" y="372" width="240" height="104" rx="22" fill="#F4F8FF" stroke="#D6E2F8"/>
+  <text x="176" y="405" fill="#58719A" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="700">MAIN BOTTLENECK</text>
+  <text x="176" y="444" fill="#132342" font-family="Segoe UI, Arial, sans-serif" font-size="24" font-weight="700">Content Creation</text>
+  <text x="436" y="405" fill="#58719A" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="700">MONTHLY BUDGET</text>
+  <text x="436" y="444" fill="#132342" font-family="Segoe UI, Arial, sans-serif" font-size="24" font-weight="700">$300 - $1,000</text>
+
+  <text x="148" y="528" fill="#163983" font-family="Segoe UI, Arial, sans-serif" font-size="22" font-weight="700">Starter Stack</text>
+  <rect x="148" y="548" width="500" height="156" rx="24" fill="#EFF5FF" stroke="#D7E5FB"/>
+  <rect x="176" y="582" width="118" height="34" rx="17" fill="#D9E7FF"/>
+  <rect x="308" y="582" width="140" height="34" rx="17" fill="#E8F5EC"/>
+  <rect x="462" y="582" width="128" height="34" rx="17" fill="#F6EAF9"/>
+  <text x="196" y="604" fill="#173D8F" font-family="Segoe UI, Arial, sans-serif" font-size="15" font-weight="700">ChatGPT</text>
+  <text x="331" y="604" fill="#2A6A4A" font-family="Segoe UI, Arial, sans-serif" font-size="15" font-weight="700">Canva</text>
+  <text x="486" y="604" fill="#814D8F" font-family="Segoe UI, Arial, sans-serif" font-size="15" font-weight="700">OpusClip</text>
+  <text x="176" y="646" fill="#1F355F" font-family="Segoe UI, Arial, sans-serif" font-size="17" font-weight="700">
+    <tspan x="176" dy="0">Fastest path to better briefs, social assets,</tspan>
+    <tspan x="176" dy="24">and client follow-up</tspan>
+  </text>
+  <text x="176" y="697" fill="#567193" font-family="Segoe UI, Arial, sans-serif" font-size="15">
+    <tspan x="176" dy="0">Built for a small agency team that needs faster</tspan>
+    <tspan x="176" dy="22">recap-to-content workflows.</tspan>
+  </text>
+
+  <text x="148" y="748" fill="#163983" font-family="Segoe UI, Arial, sans-serif" font-size="22" font-weight="700">First 3 Workflows</text>
+  <text x="148" y="784" fill="#173D8F" font-family="Segoe UI, Arial, sans-serif" font-size="17" font-weight="700">1. Client meeting recap -> content brief -> approval summary</text>
+  <text x="148" y="815" fill="#173D8F" font-family="Segoe UI, Arial, sans-serif" font-size="17" font-weight="700">2. Long video/interview -> LinkedIn clips + captions + thumbnails</text>
+  <text x="148" y="846" fill="#173D8F" font-family="Segoe UI, Arial, sans-serif" font-size="17" font-weight="700">3. Campaign ideas -> branded mockups -> handoff checklist</text>
+
+  <text x="840" y="232" fill="#C9D7F8" font-family="Segoe UI, Arial, sans-serif" font-size="15" font-weight="700" letter-spacing="1.2">PAGE 2</text>
+  <text x="840" y="274" fill="#173D8F" font-family="Segoe UI, Arial, sans-serif" font-size="28" font-weight="700">30-Day Rollout + Upgrade Path</text>
+  <text x="840" y="312" fill="#58719A" font-family="Segoe UI, Arial, sans-serif" font-size="17">
+    <tspan x="840" dy="0">What the finished PDF feels like after the cover</tspan>
+    <tspan x="840" dy="22">and stack summary.</tspan>
+  </text>
+
+  <rect x="840" y="350" width="524" height="130" rx="24" fill="#F4F8FF" stroke="#D6E2F8"/>
+  <text x="872" y="388" fill="#58719A" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="700">WEEK 1</text>
+  <text x="872" y="418" fill="#163983" font-family="Segoe UI, Arial, sans-serif" font-size="19" font-weight="700">
+    <tspan x="872" dy="0">Lock the core stack</tspan>
+    <tspan x="872" dy="24">and prompt library</tspan>
+  </text>
+  <text x="872" y="468" fill="#567193" font-family="Segoe UI, Arial, sans-serif" font-size="14">
+    <tspan x="872" dy="0">Choose the assistant, brand design tool, and clip</tspan>
+    <tspan x="872" dy="20">workflow before adding automations.</tspan>
+  </text>
+
+  <rect x="840" y="500" width="252" height="154" rx="24" fill="#EEF7F1" stroke="#D8ECD9"/>
+  <text x="868" y="536" fill="#4F7854" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="700">MISTAKES TO AVOID</text>
+  <text x="868" y="572" fill="#264F34" font-family="Segoe UI, Arial, sans-serif" font-size="16" font-weight="700">
+    <tspan x="868" dy="0">Too many content</tspan>
+    <tspan x="868" dy="22">tools at once</tspan>
+  </text>
+  <text x="868" y="620" fill="#50735A" font-family="Segoe UI, Arial, sans-serif" font-size="14">
+    <tspan x="868" dy="0">Keep editing and planning tight before</tspan>
+    <tspan x="868" dy="20">layering on advanced automations.</tspan>
+  </text>
+
+  <rect x="1112" y="500" width="252" height="154" rx="24" fill="#FFF6E8" stroke="#F1DFC1"/>
+  <text x="1140" y="536" fill="#8B6C2B" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="700">UPGRADE PATH</text>
+  <text x="1140" y="572" fill="#6B531B" font-family="Segoe UI, Arial, sans-serif" font-size="16" font-weight="700">
+    <tspan x="1140" dy="0">Add CRM and</tspan>
+    <tspan x="1140" dy="22">automation</tspan>
+  </text>
+  <text x="1140" y="620" fill="#8C743E" font-family="Segoe UI, Arial, sans-serif" font-size="14">
+    <tspan x="1140" dy="0">Move recaps and approvals into a lightweight</tspan>
+    <tspan x="1140" dy="20">lead and client-delivery system.</tspan>
+  </text>
+
+  <rect x="840" y="682" width="524" height="170" rx="24" fill="#F7F8FC" stroke="#E3E7F2"/>
+  <text x="872" y="720" fill="#58719A" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="700">REPORT FOOTER SNAPSHOT</text>
+  <text x="872" y="758" fill="#163983" font-family="Segoe UI, Arial, sans-serif" font-size="21" font-weight="700">Prepared for ABC Company</text>
+  <text x="872" y="789" fill="#567193" font-family="Segoe UI, Arial, sans-serif" font-size="16">123 Example Avenue, Seattle, WA 98101</text>
+  <text x="872" y="815" fill="#567193" font-family="Segoe UI, Arial, sans-serif" font-size="16">206-555-0142  |  owner@abc-company.example</text>
+  <text x="872" y="841" fill="#567193" font-family="Segoe UI, Arial, sans-serif" font-size="16">This report combines the intake answers with EasyAIStack ranking logic.</text>
+</svg>

@@ -1,0 +1,100 @@
+<svg width="1600" height="620" viewBox="0 0 1600 620" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="1600" y1="0" x2="980" y2="620" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#0B2348"/>
+      <stop offset="1" stop-color="#133C9C"/>
+    </linearGradient>
+    <linearGradient id="pillGreen" x1="0" y1="0" x2="360" y2="160" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#31B89A"/>
+      <stop offset="1" stop-color="#1E7C72"/>
+    </linearGradient>
+    <linearGradient id="pillOrange" x1="0" y1="0" x2="300" y2="160" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#F29A35"/>
+      <stop offset="1" stop-color="#D26A20"/>
+    </linearGradient>
+    <linearGradient id="pillBlue" x1="0" y1="0" x2="340" y2="180" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#4B90FF"/>
+      <stop offset="1" stop-color="#2450B4"/>
+    </linearGradient>
+    <linearGradient id="pillTeal" x1="0" y1="0" x2="320" y2="180" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#24B8B6"/>
+      <stop offset="1" stop-color="#146E8A"/>
+    </linearGradient>
+    <filter id="glow" x="-80" y="-80" width="1760" height="780" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feGaussianBlur stdDeviation="20"/>
+    </filter>
+  </defs>
+
+  <rect width="1600" height="620" fill="url(#bg)"/>
+
+  <g filter="url(#glow)" opacity="0.36">
+    <circle cx="1362" cy="118" r="84" fill="#3C89FF"/>
+    <circle cx="1188" cy="512" r="90" fill="#32B89A"/>
+    <circle cx="1492" cy="394" r="72" fill="#F29A35"/>
+  </g>
+
+  <g opacity="0.08" fill="white" font-family="Segoe UI, Arial, sans-serif" font-weight="700">
+    <text x="1088" y="84" font-size="48">ChatGPT</text>
+    <text x="1296" y="142" font-size="42">Claude</text>
+    <text x="1160" y="238" font-size="44">Shopify</text>
+    <text x="1378" y="320" font-size="38">Zendesk</text>
+    <text x="1042" y="420" font-size="40">OpusClip</text>
+    <text x="1250" y="520" font-size="46">EasyAIStack</text>
+  </g>
+
+  <g opacity="0.16">
+    <path d="M1008 110C1060 110 1090 110 1128 132C1164 153 1184 190 1228 212C1268 232 1304 232 1376 232H1472" stroke="#7EDBFF" stroke-width="6" stroke-linecap="round"/>
+    <path d="M1038 332C1088 332 1116 332 1148 316C1186 296 1190 262 1228 246C1260 232 1302 232 1368 232" stroke="#6DE3C7" stroke-width="6" stroke-linecap="round"/>
+    <path d="M1090 474C1142 474 1166 474 1196 456C1228 436 1238 406 1272 392C1304 378 1338 378 1416 378" stroke="#FFD36A" stroke-width="6" stroke-linecap="round"/>
+  </g>
+
+  <g>
+    <circle cx="1008" cy="110" r="13" fill="#7EDBFF"/>
+    <circle cx="1376" cy="232" r="13" fill="#6DE3C7"/>
+    <circle cx="1038" cy="332" r="13" fill="#FFD36A"/>
+    <circle cx="1416" cy="378" r="13" fill="#7EDBFF"/>
+    <circle cx="1090" cy="474" r="13" fill="#FFD36A"/>
+  </g>
+
+  <g transform="translate(1018 108)">
+    <rect x="0" y="0" width="338" height="98" rx="28" fill="url(#pillGreen)"/>
+    <rect x="24" y="22" width="56" height="56" rx="18" fill="white" fill-opacity="0.16"/>
+    <path d="M40 50C40 41.1634 47.1634 34 56 34C64.8366 34 72 41.1634 72 50C72 58.8366 64.8366 66 56 66C47.1634 66 40 58.8366 40 50Z" stroke="white" stroke-width="3"/>
+    <path d="M48 50L53 55L64 44" stroke="white" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"/>
+    <text x="102" y="48" fill="white" font-family="Segoe UI, Arial, sans-serif" font-size="24" font-weight="700">ChatGPT</text>
+    <text x="102" y="73" fill="white" fill-opacity="0.82" font-family="Segoe UI, Arial, sans-serif" font-size="14" font-weight="600">Drafting, summaries, SOPs</text>
+  </g>
+
+  <g transform="translate(1260 190)">
+    <rect x="0" y="0" width="264" height="90" rx="26" fill="url(#pillOrange)"/>
+    <rect x="20" y="18" width="52" height="52" rx="16" fill="white" fill-opacity="0.16"/>
+    <path d="M38 54L48 40L58 54L66 34" stroke="white" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
+    <text x="88" y="44" fill="white" font-family="Segoe UI, Arial, sans-serif" font-size="22" font-weight="700">Claude</text>
+    <text x="88" y="66" fill="white" fill-opacity="0.82" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="600">Long-form analysis</text>
+  </g>
+
+  <g transform="translate(1090 272)">
+    <rect x="0" y="0" width="302" height="96" rx="28" fill="url(#pillBlue)"/>
+    <rect x="22" y="20" width="54" height="54" rx="17" fill="white" fill-opacity="0.16"/>
+    <path d="M38 36H60V58H38V36Z" stroke="white" stroke-width="3"/>
+    <path d="M44 64H54" stroke="white" stroke-width="3.2" stroke-linecap="round"/>
+    <text x="96" y="47" fill="white" font-family="Segoe UI, Arial, sans-serif" font-size="23" font-weight="700">Shopify</text>
+    <text x="96" y="71" fill="white" fill-opacity="0.82" font-family="Segoe UI, Arial, sans-serif" font-size="14" font-weight="600">Store operations and retention</text>
+  </g>
+
+  <g transform="translate(1324 344)">
+    <rect x="0" y="0" width="248" height="88" rx="25" fill="url(#pillTeal)"/>
+    <rect x="20" y="18" width="50" height="50" rx="16" fill="white" fill-opacity="0.16"/>
+    <path d="M36 42H54M36 50H54M36 58H49" stroke="white" stroke-width="3.2" stroke-linecap="round"/>
+    <text x="86" y="44" fill="white" font-family="Segoe UI, Arial, sans-serif" font-size="21" font-weight="700">Zendesk</text>
+    <text x="86" y="66" fill="white" fill-opacity="0.82" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="600">Support and service</text>
+  </g>
+
+  <g transform="translate(1052 442)">
+    <rect x="0" y="0" width="282" height="92" rx="27" fill="url(#pillBlue)"/>
+    <rect x="22" y="18" width="52" height="52" rx="16" fill="white" fill-opacity="0.16"/>
+    <path d="M38 61V35L61 48L38 61Z" fill="white"/>
+    <text x="92" y="44" fill="white" font-family="Segoe UI, Arial, sans-serif" font-size="22" font-weight="700">OpusClip</text>
+    <text x="92" y="68" fill="white" fill-opacity="0.82" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="600">Repurpose video faster</text>
+  </g>
+</svg>
