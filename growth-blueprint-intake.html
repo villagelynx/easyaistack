@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Growth Blueprint Intake | EasyAIStack</title>
+  <meta name="description" content="Complete the Growth Blueprint intake and generate a printable AI tools blueprint report.">
+  <meta name="robots" content="noindex, nofollow">
+  <link rel="icon" type="image/svg+xml" href="./favicon.svg?v=20260422-1">
+  <link rel="stylesheet" href="./styles.css?v=20260424-1">
+</head>
+<body>
+  <main class="page-shell">
+    <section class="hero">
+      <div class="hero-utility">
+        <div class="utility-links">
+          <a class="hero-link utility-link secondary-hero-link" href="./index.html">Home</a>
+          <a class="hero-link utility-link" href="./browse.html?view=all">Browse Tools</a>
+          <a class="hero-link utility-link" href="./ai-stack-plan.html">AI Stack Overview</a>
+          <a class="hero-link utility-link" href="https://utility-split-pro.myshopify.com/products/ai-blueprints?variant=47570889244902">Buy Blueprints</a>
+        </div>
+        <a class="utility-brand-homepage" href="./index.html" aria-label="EasyAIStack Home">
+          <div class="brand-lockup utility-brand-homepage-lockup">
+            <div class="brand-mark" aria-hidden="true">
+              <img src="./favicon.svg?v=20260422-1" alt="" width="42" height="42">
+            </div>
+            <div class="brand-text-lockup">
+              <p class="eyebrow site-wordmark">
+                <span class="brand-word brand-word-easy">Easy</span><span class="brand-word brand-word-ai">AI</span><span class="brand-word brand-word-stack">Stack</span>
+              </p>
+              <p class="hero-home-kicker">We help business owners choose and adopt the right mix of AI tools.</p>
+            </div>
+          </div>
+        </a>
+      </div>
+      <p class="eyebrow">Growth Blueprint Intake</p>
+      <h1>Complete the intake, then generate your Growth Blueprint report.</h1>
+      <p class="hero-copy">
+        Answer what you can in 3-5 minutes. The generator uses the same planner logic as the site, then expands it into a printable blueprint report.
+      </p>
+      <div class="hero-actions">
+        <a class="hero-link secondary-hero-link" href="./sample-growth-blueprint.html">See Growth Preview</a>
+        <a class="hero-link secondary-hero-link" href="./sample-scale-blueprint.html">See Scale Preview</a>
+      </div>
+    </section>
+
+    <section class="results-panel standalone-panel no-print">
+      <div class="results-header">
+        <div>
+          <p class="eyebrow">Intake</p>
+          <h2>Growth Blueprint questionnaire</h2>
+          <p class="summary-copy">This combines the original planner filters plus the deeper intake fields so the report can be generated immediately.</p>
+        </div>
+      </div>
+
+      <form id="blueprintIntakeForm" class="inline-form-grid fulfillment-form-grid">
+        <div class="fulfillment-form-heading fulfillment-field-full">
+          <p class="eyebrow">Blueprint Tier</p>
+          <h3>Growth Blueprint</h3>
+          <p class="summary-copy">Next-step buying + rollout guidance for owner-led teams.</p>
+        </div>
+
+        <input type="hidden" name="blueprintTier" value="Growth Blueprint">
+
+        <div class="field">
+          <label for="blueprintTierDisplay">Blueprint Tier</label>
+          <input id="blueprintTierDisplay" class="text-input" type="text" value="Growth Blueprint" disabled>
+        </div>
+
+        <div class="field">
+          <label for="businessName">Business Name</label>
+          <input id="businessName" class="text-input" type="text" name="businessName" placeholder="Your business name" required>
+        </div>
+
+        <div class="field">
+          <label for="businessType">Business Type</label>
+          <select id="businessType" name="businessType">
+            <option value="">Select one</option>
+            <option>Local Service</option>
+            <option>Agency</option>
+            <option>Consultant</option>
+            <option>Coach</option>
+            <option>Creator</option>
+            <option>Ecommerce</option>
+            <option>Real Estate</option>
+            <option>Legal</option>
+            <option>Medical/Dental</option>
+            <option>SaaS</option>
+          </select>
+        </div>
+
+        <div class="field">
+          <label for="creatorPlatform">Creator Platform</label>
+          <select id="creatorPlatform" name="creatorPlatform">
+            <option value="">Select one</option>
+            <option>All</option>
+            <option>TikTok</option>
+            <option>Instagram</option>
+            <option>YouTube</option>
+          </select>
+        </div>
+
+        <div class="field">
+          <label for="teamSize">Team Size</label>
+          <select id="teamSize" name="teamSize">
+            <option value="">Select one</option>
+            <option>Solo</option>
+            <option>2-5</option>
+            <option>6-20</option>
+            <option>21+</option>
+          </select>
+        </div>
+
+        <div class="field">
+          <label for="monthlyBudget">Monthly Budget</label>
+          <select id="monthlyBudget" name="monthlyBudget">
+            <option value="">Select one</option>
+            <option>Under $100/mo</option>
+            <option>$100-$300/mo</option>
+            <option>$300-$1000/mo</option>
+            <option>$1000+/mo</option>
+          </select>
+        </div>
+
+        <div class="field">
+          <label for="techComfort">Tech Comfort</label>
+          <select id="techComfort" name="techComfort">
+            <option value="">Select one</option>
+            <option>Low</option>
+            <option>Medium</option>
+            <option>High</option>
+          </select>
+        </div>
+
+        <div class="field fulfillment-field-full">
+          <label>Platform / Integrations</label>
+          <div class="field-checkbox-group fulfillment-multi-group" data-multi-key="integrationPlatform" data-sync-hidden="integrationPlatform">
+            <input id="integrationPlatform" class="text-input" type="hidden" name="integrationPlatform">
+            <div class="filter-checkbox-list">
+              <label class="filter-checkbox-option"><input class="filter-checkbox-input" type="checkbox" value="Shopify" data-multi-option><span class="filter-checkbox-text">Shopify</span></label>
+              <label class="filter-checkbox-option"><input class="filter-checkbox-input" type="checkbox" value="LinkedIn" data-multi-option><span class="filter-checkbox-text">LinkedIn</span></label>
+              <label class="filter-checkbox-option"><input class="filter-checkbox-input" type="checkbox" value="Meta" data-multi-option><span class="filter-checkbox-text">Meta</span></label>
+              <label class="filter-checkbox-option"><input class="filter-checkbox-input" type="checkbox" value="Instagram" data-multi-option><span class="filter-checkbox-text">Instagram</span></label>
+              <label class="filter-checkbox-option"><input class="filter-checkbox-input" type="checkbox" value="YouTube" data-multi-option><span class="filter-checkbox-text">YouTube</span></label>
+              <label class="filter-checkbox-option"><input class="filter-checkbox-input" type="checkbox" value="TikTok" data-multi-option><span class="filter-checkbox-text">TikTok</span></label>
+              <label class="filter-checkbox-option"><input class="filter-checkbox-input" type="checkbox" value="Google Workspace" data-multi-option><span class="filter-checkbox-text">Google Workspace</span></label>
+              <label class="filter-checkbox-option"><input class="filter-checkbox-input" type="checkbox" value="Microsoft 365" data-multi-option><span class="filter-checkbox-text">Microsoft 365</span></label>
+              <label class="filter-checkbox-option"><input class="filter-checkbox-input" type="checkbox" value="Slack" data-multi-option><span class="filter-checkbox-text">Slack</span></label>
+              <label class="filter-checkbox-option"><input class="filter-checkbox-input" type="checkbox" value="HubSpot" data-multi-option><span class="filter-checkbox-text">HubSpot</span></label>
+              <label class="filter-checkbox-option"><input class="filter-checkbox-input" type="checkbox" value="Notion" data-multi-option><span class="filter-checkbox-text">Notion</span></label>
+              <label class="filter-checkbox-option"><input class="filter-checkbox-input" type="checkbox" value="Calendly" data-multi-option><span class="filter-checkbox-text">Calendly</span></label>
+            </div>
+          </div>
+        </div>
+
+        <div class="field">
+          <label for="languageNeed">Language Need</label>
+          <select id="languageNeed" name="languageNeed">
+            <option value="">Select one</option>
+            <option>Any</option>
+            <option>Text Translation</option>
+            <option>Multilingual Writing</option>
+            <option>Live Meeting Translation</option>
+            <option>Video Dubbing</option>
+            <option>Subtitles / Localization</option>
+          </select>
+        </div>
+
+        <div class="field">
+          <label for="financeNeed">Finance / Bookkeeping</label>
+          <select id="financeNeed" name="financeNeed">
+            <option value="">Select one</option>
+            <option>Any</option>
+            <option>Bookkeeping</option>
+            <option>Invoices &amp; Payments</option>
+            <option>Cash Flow Insights</option>
+            <option>Tax / Sales Tax</option>
+          </select>
+        </div>
+
+        <div class="field">
+          <label for="supportChannel">Support / Chat Channel</label>
+          <select id="supportChannel" name="supportChannel">
+            <option value="">Select one</option>
+            <option>Any</option>
+            <option>Website Chat</option>
+            <option>Email</option>
+            <option>Phone</option>
+            <option>DMs / Social</option>
+            <option>Help Center</option>
+          </select>
+        </div>
+
+        <div class="field">
+          <label for="salesNeed">Sales Need</label>
+          <select id="salesNeed" name="salesNeed">
+            <option value="">Select one</option>
+            <option>Any</option>
+            <option>Lead Capture</option>
+            <option>Lead Follow-Up</option>
+            <option>Proposal Drafting</option>
+            <option>Pipeline Updates</option>
+          </select>
+        </div>
+
+        <div class="field">
+          <label for="automationNeed">Automation Need</label>
+          <select id="automationNeed" name="automationNeed">
+            <option value="">Select one</option>
+            <option>Any</option>
+            <option>Not Needed</option>
+            <option>Helpful</option>
+            <option>Essential</option>
+          </select>
+        </div>
+
+        <div class="field">
+          <label for="aiAgents">AI Agents</label>
+          <select id="aiAgents" name="aiAgents">
+            <option value="">Select one</option>
+            <option>Any</option>
+            <option>Not Needed</option>
+            <option>Helpful</option>
+            <option>Essential</option>
+          </select>
+        </div>
+
+        <div class="field">
+          <label for="meetingNotes">Meeting Notes</label>
+          <select id="meetingNotes" name="meetingNotes">
+            <option value="">Select one</option>
+            <option>Any</option>
+            <option>Not Needed</option>
+            <option>Helpful</option>
+            <option>Essential</option>
+          </select>
+        </div>
+
+        <div class="field">
+          <label for="designContent">Design &amp; Content</label>
+          <select id="designContent" name="designContent">
+            <option value="">Select one</option>
+            <option>Any</option>
+            <option>Not Needed</option>
+            <option>Helpful</option>
+            <option>Essential</option>
+          </select>
+        </div>
+
+        <div class="field">
+          <label for="citedResearch">Cited Research</label>
+          <select id="citedResearch" name="citedResearch">
+            <option value="">Select one</option>
+            <option>Any</option>
+            <option>Not Needed</option>
+            <option>Helpful</option>
+            <option>Essential</option>
+          </select>
+        </div>
+
+        <div class="field">
+          <label for="knowledgeBase">Internal Knowledge Base</label>
+          <select id="knowledgeBase" name="knowledgeBase">
+            <option value="">Select one</option>
+            <option>Any</option>
+            <option>Not Needed</option>
+            <option>Helpful</option>
+            <option>Essential</option>
+          </select>
+        </div>
+
+        <div class="field">
+          <label for="leadVolume">Lead Volume</label>
+          <select id="leadVolume" name="leadVolume">
+            <option value="">Select one</option>
+            <option>Any</option>
+            <option>Low</option>
+            <option>Medium</option>
+            <option>High</option>
+          </select>
+        </div>
+
+        <div class="field">
+          <label for="contentVolume">Content Volume</label>
+          <select id="contentVolume" name="contentVolume">
+            <option value="">Select one</option>
+            <option>Any</option>
+            <option>Low</option>
+            <option>Medium</option>
+            <option>High</option>
+          </select>
+        </div>
+
+        <div class="field">
+          <label for="meetingVolume">Meeting Volume</label>
+          <select id="meetingVolume" name="meetingVolume">
+            <option value="">Select one</option>
+            <option>Any</option>
+            <option>Low</option>
+            <option>Medium</option>
+            <option>High</option>
+          </select>
+        </div>
+
+        <div class="field">
+          <label for="implementationOwner">Implementation Owner</label>
+          <select id="implementationOwner" name="implementationOwner">
+            <option value="">Select one</option>
+            <option>Owner / founder</option>
+            <option>Admin / office manager</option>
+            <option>Small internal team</option>
+            <option>External freelancer / agency</option>
+          </select>
+        </div>
+
+        <div class="field">
+          <label for="primaryBottleneck">Primary Bottleneck</label>
+          <select id="primaryBottleneck" name="primaryBottleneck">
+            <option value="">Select one</option>
+            <option>Lead Follow-Up</option>
+            <option>Content Creation</option>
+            <option>Admin Work</option>
+            <option>Meetings</option>
+            <option>Research</option>
+            <option>Customer Support</option>
+            <option>Internal Docs</option>
+            <option>Scheduling</option>
+          </select>
+        </div>
+
+        <div class="field">
+          <label for="mainGoal">Main Goal</label>
+          <select id="mainGoal" name="mainGoal">
+            <option value="">Select one</option>
+            <option>Save Time</option>
+            <option>Close More Leads</option>
+            <option>Create Content Faster</option>
+            <option>Improve Service</option>
+            <option>Reduce Busywork</option>
+          </select>
+        </div>
+
+        <div class="field fulfillment-field-full">
+          <label for="firstWorkflowToFix">First Workflow To Fix</label>
+          <input id="firstWorkflowToFix" class="text-input" type="text" name="firstWorkflowToFix" placeholder="Lead form to callback, proposal writing, meeting cleanup">
+        </div>
+
+        <div class="field fulfillment-field-full">
+          <label for="currentTools">Current Tools</label>
+          <input id="currentTools" class="text-input" type="text" name="currentTools" placeholder="Google Workspace, HubSpot, Shopify, Slack">
+        </div>
+
+        <div class="field">
+          <label for="specialFocus">Special Focus</label>
+          <select id="specialFocus" name="specialFocus">
+            <option value="">Select one</option>
+            <option>General Small Business</option>
+            <option>Ecommerce</option>
+            <option>Healthcare</option>
+            <option>Enterprise Operations</option>
+          </select>
+        </div>
+
+        <div class="field fulfillment-field-full">
+          <label for="mainPlatforms">Main Platforms or Channels</label>
+          <input id="mainPlatforms" class="text-input" type="text" name="mainPlatforms" placeholder="Shopify, LinkedIn, Meta, phone, email, YouTube">
+        </div>
+
+        <div class="field">
+          <label for="usesShopify">Already Uses Shopify</label>
+          <select id="usesShopify" name="usesShopify">
+            <option value="">Select one</option>
+            <option>No</option>
+            <option>Yes</option>
+          </select>
+        </div>
+
+        <div class="field">
+          <label for="usesOracle">Already Uses Oracle</label>
+          <select id="usesOracle" name="usesOracle">
+            <option value="">Select one</option>
+            <option>No</option>
+            <option>Yes</option>
+          </select>
+        </div>
+
+        <div class="field">
+          <label for="usesHealthcareSystems">Already Uses Healthcare Systems</label>
+          <select id="usesHealthcareSystems" name="usesHealthcareSystems">
+            <option value="">Select one</option>
+            <option>No</option>
+            <option>Yes</option>
+          </select>
+        </div>
+
+        <div class="field">
+          <label for="phoneSupportPriority">Phone Support Priority</label>
+          <select id="phoneSupportPriority" name="phoneSupportPriority">
+            <option value="">Select one</option>
+            <option>Not Important</option>
+            <option>Helpful</option>
+            <option>Major Channel</option>
+          </select>
+        </div>
+
+        <div class="field">
+          <label for="weeklyLeadVolume">Leads or New Inquiries Per Week</label>
+          <input id="weeklyLeadVolume" class="text-input" type="text" name="weeklyLeadVolume" placeholder="About 5, 20+, or highly seasonal">
+        </div>
+
+        <div class="field">
+          <label for="weeklyMeetingVolume">Meetings or Calls Per Week</label>
+          <input id="weeklyMeetingVolume" class="text-input" type="text" name="weeklyMeetingVolume" placeholder="0-5, 10+, mostly phone">
+        </div>
+
+        <div class="field">
+          <label for="weeklySupportVolume">Support Requests Per Week</label>
+          <input id="weeklySupportVolume" class="text-input" type="text" name="weeklySupportVolume" placeholder="Low, medium, high, or not relevant">
+        </div>
+
+        <div class="field">
+          <label for="complianceSensitivity">Compliance Sensitivity</label>
+          <select id="complianceSensitivity" name="complianceSensitivity">
+            <option value="">Select one</option>
+            <option>Low</option>
+            <option>Medium</option>
+            <option>High</option>
+          </select>
+        </div>
+
+        <div class="field">
+          <label for="securityAiNeed">Security / Regulated AI Need</label>
+          <select id="securityAiNeed" name="securityAiNeed">
+            <option value="">Select one</option>
+            <option>Not Important</option>
+            <option>Helpful</option>
+            <option>Required</option>
+          </select>
+        </div>
+
+        <div class="field">
+          <label for="planDeliveryEmail">Plan Delivery Email</label>
+          <input id="planDeliveryEmail" class="text-input" type="email" name="planDeliveryEmail" placeholder="owner@business.com">
+        </div>
+
+        <div class="field fulfillment-field-full">
+          <label for="notes">Notes</label>
+          <textarea id="notes" class="text-area" name="notes" rows="5" placeholder="Approval rules, pain points, seasonality, tools already tried, or anything else that should shape the recommendation."></textarea>
+        </div>
+
+        <div class="fulfillment-button-row fulfillment-field-full">
+          <button class="secondary-button" type="submit">Generate Growth Blueprint</button>
+          <button id="printPlanButton" class="secondary-button" type="button" disabled>Print / Save PDF</button>
+          <button id="editIntakeButton" class="secondary-button ghost-button" type="button">Edit Intake</button>
+        </div>
+
+        <p id="blueprintIntakeStatus" class="fulfillment-status fulfillment-field-full" hidden></p>
+      </form>
+    </section>
+
+    <section class="results-panel standalone-panel fulfillment-preview-shell">
+      <div class="results-header no-print">
+        <div>
+          <p class="eyebrow">Report</p>
+          <h2>Generated Growth Blueprint</h2>
+          <p class="summary-copy">Generate the report, then print or save as a PDF.</p>
+        </div>
+      </div>
+
+      <div id="generatedPlanMount">
+        <article class="empty-state">
+          Complete the intake above to generate the Growth Blueprint report.
+        </article>
+      </div>
+    </section>
+
+    <footer class="site-footer no-print">
+      <div class="site-footer-inner">
+        <p class="site-footer-copy">EasyAIStack blueprints help owner-led businesses choose, buy, and roll out the right AI tool mix without overbuilding.</p>
+        <nav class="site-footer-links" aria-label="Footer">
+          <a class="site-footer-link" href="./index.html">Home</a>
+          <a class="site-footer-link" href="./ai-stack-plan.html">AI Stack Overview</a>
+          <a class="site-footer-link" href="./sample-growth-blueprint.html">Growth Preview</a>
+          <a class="site-footer-link" href="./sample-scale-blueprint.html">Scale Preview</a>
+        </nav>
+      </div>
+    </footer>
+  </main>
+
+  <script src="./tool-data.js?v=20260423-1"></script>
+  <script src="./tool-utils.js?v=20260424-3"></script>
+  <script src="./plan-generator.js?v=20260423-6"></script>
+  <script src="./blueprint-intake.js?v=20260424-1"></script>
+</body>
+</html>
+

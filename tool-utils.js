@@ -4,7 +4,8 @@
     return;
   }
 
-  const SHOPIFY_BLUEPRINT_PRODUCT_URL = "https://easyaistack.com/products/ai-blueprints";
+  const SHOPIFY_BLUEPRINT_PRODUCT_URL = "https://utility-split-pro.myshopify.com/products/ai-blueprints?variant=47570889244902";
+  const SHOPIFY_BLUEPRINT_UNLOCK_VARIANT_URL = "https://utility-split-pro.myshopify.com/products/ai-blueprints?variant=47570889244902";
 
   const ORDERED_SCALES = {
     teamSize: ["Solo", "2-5", "6-20", "21+"],
@@ -1956,7 +1957,6 @@
               <strong>${escapeHtml(growthSummary.workflowText)}</strong>
             </div>
             <div class="post-quiz-conversion-actions">
-              <a class="secondary-button" href="./second-intake-preview.html">See Growth 2nd Intake</a>
               <a class="secondary-button" href="./sample-growth-blueprint.html"><span class="premium-text premium-text-tight"><span class="premium-star" aria-hidden="true">&#9733;</span><span>See Premium Growth Blueprint Preview</span></span></a>
               <a class="secondary-button" href="./sample-scale-blueprint.html"><span class="premium-text premium-text-tight"><span class="premium-star" aria-hidden="true">&#9733;</span><span>See Premium Scale Blueprint Preview</span></span></a>
               <a class="secondary-button" href="./sample-ai-stack-plans.html"><span class="premium-text premium-text-tight"><span class="premium-star" aria-hidden="true">&#9733;</span><span>See 6 Premium Sample Plans</span></span></a>
@@ -2070,9 +2070,7 @@
             const lockedHeading = tier.key === "growth"
               ? "Choose the right next stack and rollout"
               : "Turn the stack into an AI operating system";
-            const lockedCtaHref = tier.key === "growth"
-              ? SHOPIFY_BLUEPRINT_PRODUCT_URL
-              : SHOPIFY_BLUEPRINT_PRODUCT_URL;
+            const lockedCtaHref = SHOPIFY_BLUEPRINT_UNLOCK_VARIANT_URL;
             const lockedPreviewHref = tier.key === "growth"
               ? "./sample-growth-blueprint.html"
               : "./sample-scale-blueprint.html";
