@@ -4986,7 +4986,7 @@ a[href^="./buy-premium-plan.html"].secondary-button:focus-visible {
   }
 
   .hero-home {
-    padding: calc(108px + env(safe-area-inset-top, 0px)) 18px 18px;
+    padding: calc(118px + env(safe-area-inset-top, 0px)) 18px 18px;
   }
 
   .paid-plan-price {
@@ -5008,7 +5008,7 @@ a[href^="./buy-premium-plan.html"].secondary-button:focus-visible {
     flex-direction: column;
     align-items: stretch;
     gap: 0;
-    padding: calc(12px + env(safe-area-inset-top, 0px)) 16px 12px;
+    padding: calc(4px + env(safe-area-inset-top, 0px)) 12px 12px;
     margin-bottom: 0;
     border-radius: 0 0 22px 22px;
     background: rgba(255, 255, 255, 0.98);
@@ -5020,14 +5020,32 @@ a[href^="./buy-premium-plan.html"].secondary-button:focus-visible {
   }
 
   .mobile-hero-brand {
-    font-size: 1.34rem;
-    letter-spacing: 0.12em;
+    font-size: clamp(1.46rem, 6.1vw, 1.85rem);
+    letter-spacing: 0.055em;
+    line-height: 1;
   }
 
   .mobile-hero-brand-mark {
-    width: 44px;
-    height: 44px;
-    flex-basis: 44px;
+    width: clamp(48px, 13vw, 56px);
+    height: clamp(48px, 13vw, 56px);
+    flex-basis: clamp(48px, 13vw, 56px);
+  }
+
+  .mobile-hero-brand-lockup {
+    gap: 8px;
+    flex: 1 1 auto;
+  }
+
+  .mobile-hero-toolbar-row {
+    gap: 8px;
+  }
+
+  .mobile-hero-tagline {
+    width: 100%;
+    margin-top: 8px;
+    font-size: clamp(1.18rem, 4.7vw, 1.42rem);
+    line-height: 1.18;
+    text-align: left;
   }
 
   .hero-home .brand-lockup,
