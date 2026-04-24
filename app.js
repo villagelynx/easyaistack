@@ -545,8 +545,8 @@
       quizHeading.textContent = complete
         ? "Quiz complete"
         : totalCount > 5
-          ? "Answer a few fast questions to get free Starter Stack"
-          : "Answer five fast questions to get free Starter Stack";
+          ? "Answer a few fast questions to get your free mix of AI tool recommendations"
+          : "Answer five fast questions to get your free mix of AI tool recommendations";
     }
 
     if (quizStepStatus) {
