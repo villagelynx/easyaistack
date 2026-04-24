@@ -5071,6 +5071,7 @@ a[href^="./buy-premium-plan.html"].secondary-button:focus-visible {
     top: 8px;
     right: 0;
     margin-left: 0;
+    z-index: 130;
   }
 
   .mobile-hero-menu-button {
@@ -5085,6 +5086,28 @@ a[href^="./buy-premium-plan.html"].secondary-button:focus-visible {
     border-color: transparent;
     box-shadow: none;
     color: var(--action-blue-dark);
+    position: relative;
+    z-index: 132;
+  }
+
+  .mobile-hero-menu[open]::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    background: #ffffff;
+    z-index: 120;
+  }
+
+  .mobile-hero-menu[open] .mobile-hero-menu-panel {
+    position: fixed;
+    top: calc(86px + env(safe-area-inset-top, 0px));
+    left: 10px;
+    right: 10px;
+    width: auto;
+    min-width: 0;
+    max-height: calc(100vh - 104px - env(safe-area-inset-top, 0px));
+    overflow-y: auto;
+    z-index: 131;
   }
 
   .mobile-hero-menu-button::after {
