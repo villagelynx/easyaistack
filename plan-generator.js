@@ -457,10 +457,10 @@
     if (!lowerValue) {
       return "Growth Blueprint";
     }
-    if (lowerValue.includes("scale") || lowerValue.includes("$59")) {
+    if (lowerValue.includes("scale") || lowerValue.includes("$99")) {
       return "Scale Blueprint";
     }
-    if (lowerValue.includes("growth") || lowerValue.includes("$29") || lowerValue.includes("plan")) {
+    if (lowerValue.includes("growth") || lowerValue.includes("$39") || lowerValue.includes("plan")) {
       return "Growth Blueprint";
     }
     return "Growth Blueprint";
@@ -797,6 +797,9 @@
     }
 
     const amount = Number(numberMatch[0]);
+    if (text.includes("+") && amount >= thresholds.mediumMax) {
+      return "High";
+    }
     if (amount <= thresholds.lowMax) {
       return "Low";
     }
@@ -1861,7 +1864,7 @@
       timeSaved: `${totalRange.low}-${totalRange.high} hrs/week`,
       costSavings: `${formatCurrency(monthlyCapacityLow)}-${formatCurrency(monthlyCapacityHigh)}/month`,
       revenuePotential: getRevenuePotentialCopy(plan, totalRange),
-      payback: "The $29 plan should pay back fast if it saves even a fraction of one owner hour or recovers one useful lead.",
+      payback: "The $39 plan should pay back fast if it saves even a fraction of one owner hour or recovers one useful lead.",
       hourlyValue
     };
   }

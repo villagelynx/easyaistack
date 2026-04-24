@@ -4,8 +4,7 @@
     return;
   }
 
-  const SHOPIFY_BLUEPRINT_PRODUCT_URL = "https://utility-split-pro.myshopify.com/products/ai-blueprints?variant=47570889244902";
-  const SHOPIFY_BLUEPRINT_UNLOCK_VARIANT_URL = "https://utility-split-pro.myshopify.com/products/ai-blueprints?variant=47570889244902";
+  const SHOPIFY_BLUEPRINT_PRODUCT_URL = "https://easyaistack.com/products/ai-blueprints";
 
   const ORDERED_SCALES = {
     teamSize: ["Solo", "2-5", "6-20", "21+"],
@@ -124,54 +123,18 @@
     return normalizeFreeText(state && state.businessDescription).toLowerCase();
   }
 
-  function matchesDescriptionSignal(text, pattern) {
-    return Boolean(text) && pattern.test(text);
-  }
-
-  function getBusinessDescriptionSignals(state) {
-    const text = getBusinessDescriptionText(state);
-
-    return {
-      text,
-      hasText: Boolean(text),
-      sales: matchesDescriptionSignal(text, /sell|sales|buyer|buyers|lead|leads|prospect|prospects|conversion|conversions|follow-up|followup|close more|commission|commissions|inquir(?:y|ies)|quote|quotes/),
-      email: matchesDescriptionSignal(text, /newsletter|email list|email marketing|email campaign|campaign|campaigns|launch|launches|broadcast|broadcasts/),
-      social: matchesDescriptionSignal(text, /instagram|tiktok|youtube|social|dm|dms|followers|audience|creator|reels|shorts/),
-      store: matchesDescriptionSignal(text, /shopify|etsy|shop|store|storefront|product|products|catalog|checkout|cart/),
-      bookings: matchesDescriptionSignal(text, /booking|bookings|appointment|appointments|calendar|schedule|scheduling|consultation|consultations|discovery call|call booking|quote request|commissions|inquir(?:y|ies)/),
-      events: matchesDescriptionSignal(text, /gallery|galleries|event|events|booth|market|markets|fair|fairs|show|shows|pop-up|popup|exhibit|exhibits/),
-      support: matchesDescriptionSignal(text, /support|customer service|customer support|help desk|helpdesk|ticket|tickets|faq|faqs|help center|chat/),
-      phone: matchesDescriptionSignal(text, /phone|call|calls|voicemail|voicemails|voice/),
-      meetings: matchesDescriptionSignal(text, /meeting|meetings|transcript|transcripts|notes|note cleanup|recap|recaps/),
-      content: matchesDescriptionSignal(text, /content|blog|blogs|post|posts|caption|captions|video|videos|podcast|podcasts|script|scripts|repurpose|repurposing|marketing/),
-      design: matchesDescriptionSignal(text, /design|creative|graphics|visual|visuals|brand|branding|thumbnail|thumbnails/),
-      automation: matchesDescriptionSignal(text, /automate|automation|workflow|workflows|handoff|handoffs|integrate|integration|sync|system|systems/),
-      docs: matchesDescriptionSignal(text, /sop|sops|documentation|docs|knowledge base|knowledgebase|wiki|internal docs|proposal|proposals|brief|briefs/),
-      research: matchesDescriptionSignal(text, /research|analysis|analy(?:s|z)e|insight|insights|competitive|market research/),
-      analytics: matchesDescriptionSignal(text, /dashboard|dashboards|reporting|reports|kpi|kpis|metrics|analytics/),
-      finance: matchesDescriptionSignal(text, /bookkeeping|bookkeeper|invoice|invoices|cash flow|cashflow|expense|expenses|billing|payments|finance|financial/),
-      compliance: matchesDescriptionSignal(text, /compliance|security|secure|privacy|hipaa|regulated|risk|legal review/),
-      hiring: matchesDescriptionSignal(text, /hire|hiring|recruit|recruiting|candidate|candidates|resume|resumes|applicant|applicants/),
-      internalOps: matchesDescriptionSignal(text, /admin|administrative|operations|ops|process|processes|cleanup|clean-up|back office/)
-    };
-  }
-
   function hasCreatorSalesIntent(state) {
-    const signals = getBusinessDescriptionSignals(state);
+    const text = getBusinessDescriptionText(state);
     return state.businessType === "Creator"
       && (
         state.mainGoal === "Close More Leads"
-        || signals.sales
-        || signals.email
-        || signals.store
-        || signals.events
-        || /collector|collectors|print|prints/.test(signals.text)
+        || /sell|sales|buyer|buyers|shop|store|etsy|collector|collectors|commission|commissions|print|prints|gallery|newsletter|email|marketing/.test(text)
       );
   }
 
   function hasStorefrontSalesIntent(state) {
-    const signals = getBusinessDescriptionSignals(state);
-    return signals.store || /print|prints/.test(signals.text);
+    const text = getBusinessDescriptionText(state);
+    return /shopify|etsy|shop|store|product|products|catalog|checkout|cart|print|prints/.test(text);
   }
 
   function getBudgetBand(toolConfig) {
@@ -473,12 +436,11 @@
 
   function renderToolMiniPill(toolConfig) {
     const artwork = getArtworkMeta(toolConfig);
-    const detailHref = `./tool-detail.html?tool=${encodeURIComponent(toSlug(toolConfig.name))}`;
     return `
-      <a class="tool-mini-pill" href="${detailHref}" style="--tool-pill-start:${escapeHtml(artwork.start)}; --tool-pill-end:${escapeHtml(artwork.end)};">
+      <span class="tool-mini-pill" style="--tool-pill-start:${escapeHtml(artwork.start)}; --tool-pill-end:${escapeHtml(artwork.end)};">
         ${escapeHtml(toolConfig.name)}
         <small>${escapeHtml(toolConfig.category)}</small>
-      </a>
+      </span>
     `;
   }
 
@@ -522,11 +484,6 @@
             ${renderTag("Implementation", getImplementationLabel(toolConfig))}
             ${renderTag("Time To Value", toolConfig.timeToValue)}
             ${renderTag("Best For", bestFor)}
-          </div>
-          <div class="result-link-row">
-            <a class="guide-button" href="./tool-detail.html?tool=${encodeURIComponent(toSlug(toolConfig.name))}">View Details</a>
-            <button class="secondary-button compact-button" type="button" data-compare-tool="${escapeHtml(toSlug(toolConfig.name))}" data-compare-default-label="Add to Compare" data-compare-added-label="In Compare" aria-pressed="false">Add to Compare</button>
-            ${isHomeCard ? `<a class="guide-button" href="./articles.html">Use Cases</a>` : `<a class="guide-button" href="./index.html?businessType=${encodeURIComponent(toolConfig.businessTypes[0] || "Any")}">Run Planner</a>`}
           </div>
         </div>
       </article>
@@ -573,11 +530,10 @@
               </div>
               <div class="tool-category-browser-chips">
                 ${tools.map((toolConfig) => `
-                  <a
+                  <span
                     class="tool-category-browser-chip"
-                    href="./tool-detail.html?tool=${encodeURIComponent(toSlug(toolConfig.name))}"
                     style="--tool-pill-start:${escapeHtml(categoryColors.start)}; --tool-pill-end:${escapeHtml(categoryColors.end)};"
-                  >${escapeHtml(toolConfig.name)}</a>
+                  >${escapeHtml(toolConfig.name)}</span>
                 `).join("")}
               </div>
             </article>
@@ -980,7 +936,6 @@
 
   function getNeedDrivenPriorityCategories(state) {
     const categories = [];
-    const descriptionSignals = getBusinessDescriptionSignals(state);
 
     if (hasCreatorSalesIntent(state)) {
       categories.push("CRM", "Design", "Automation", "Content Studio");
@@ -1104,58 +1059,6 @@
     }
     if (state.complianceSensitivity === "High") {
       categories.push("Security / Compliance", "Workspace", "Core Assistant");
-    }
-
-    if (descriptionSignals.email) {
-      categories.push("CRM", "Automation", "Content Studio");
-    }
-    if (descriptionSignals.social) {
-      categories.push("CRM", "Automation", "Content Studio", "Design");
-    }
-    if (descriptionSignals.store) {
-      categories.push("Ecommerce Personalization", "CRM", "Automation", "Design");
-    }
-    if (descriptionSignals.bookings) {
-      categories.push("Scheduling", "CRM", "Automation");
-    }
-    if (descriptionSignals.events) {
-      categories.push("CRM", "Content Studio", "Design");
-    }
-    if (descriptionSignals.support) {
-      categories.push("Support", "CRM", "Automation");
-    }
-    if (descriptionSignals.phone) {
-      categories.push("Voice / Phone AI", "Support", "CRM");
-    }
-    if (descriptionSignals.meetings) {
-      categories.push("Meetings", "Core Assistant", "Workspace");
-    }
-    if (descriptionSignals.docs || descriptionSignals.internalOps) {
-      categories.push("Workspace", "Project Ops", "Core Assistant");
-    }
-    if (descriptionSignals.automation) {
-      categories.push("Automation", "Project Ops", "Workspace");
-    }
-    if (descriptionSignals.content) {
-      categories.push("Content Studio", "Design", "Core Assistant");
-    }
-    if (descriptionSignals.design) {
-      categories.push("Design", "Content Studio");
-    }
-    if (descriptionSignals.research) {
-      categories.push("Research", "Core Assistant");
-    }
-    if (descriptionSignals.analytics) {
-      categories.push("Analytics / BI", "Research", "Workspace");
-    }
-    if (descriptionSignals.finance) {
-      categories.push("Finance", "Automation", "Workspace");
-    }
-    if (descriptionSignals.compliance) {
-      categories.push("Security / Compliance", "Workspace", "Core Assistant");
-    }
-    if (descriptionSignals.hiring) {
-      categories.push("Recruiting / HR", "CRM", "Automation");
     }
 
     return categories;
@@ -1284,238 +1187,30 @@
   }
 
   function getDescriptionTierBoost(toolConfig, state, tierName) {
-    const descriptionSignals = getBusinessDescriptionSignals(state);
-    const isStarter = tierName === "starter";
-
-    if (!descriptionSignals.hasText) {
+    if (!hasCreatorSalesIntent(state)) {
       return 0;
     }
 
     let boost = 0;
 
-    if (hasCreatorSalesIntent(state)) {
-      if (toolConfig.name === "Mailchimp") {
-        boost += isStarter ? 14 : 10;
-      }
-
-      if (toolConfig.category === "CRM") {
-        boost += isStarter ? 8 : 5;
-      }
-
-      if (toolConfig.category === "Automation") {
-        boost += 3;
-      }
-
-      if (toolConfig.category === "Content Studio" && state.mainGoal === "Close More Leads" && !descriptionSignals.social) {
-        boost -= isStarter ? 3 : 1;
-      }
+    if (toolConfig.name === "Mailchimp") {
+      boost += tierName === "starter" ? 14 : 10;
     }
 
-    if (descriptionSignals.email) {
-      if (toolConfig.name === "Kit") {
-        boost += isStarter ? 18 : 12;
-      }
-      if (toolConfig.name === "Mailchimp") {
-        boost += isStarter ? 14 : 10;
-      }
-      if (toolConfig.name === "Klaviyo") {
-        boost += isStarter ? 12 : 9;
-      }
-      if (toolConfig.category === "CRM") {
-        boost += isStarter ? 6 : 4;
-      }
-      if (toolConfig.category === "Automation") {
-        boost += 3;
-      }
+    if (toolConfig.category === "CRM") {
+      boost += tierName === "starter" ? 8 : 5;
     }
 
-    if (descriptionSignals.social) {
-      if (toolConfig.name === "ManyChat") {
-        boost += isStarter ? 18 : 12;
-      }
-      if (toolConfig.name === "Opus Clip") {
-        boost += isStarter ? 10 : 7;
-      }
-      if (toolConfig.category === "CRM") {
-        boost += isStarter ? 6 : 4;
-      }
-      if (toolConfig.category === "Automation") {
-        boost += isStarter ? 5 : 3;
-      }
-      if (toolConfig.category === "Content Studio") {
-        boost += 4;
-      }
-      if (toolConfig.category === "Design") {
-        boost += 3;
-      }
+    if (toolConfig.category === "Automation") {
+      boost += 3;
     }
 
-    if (descriptionSignals.store) {
-      if (toolConfig.name === "Shopify Magic") {
-        boost += isStarter ? 18 : 12;
-      }
-      if (toolConfig.name === "Rebuy") {
-        boost += isStarter ? 15 : 11;
-      }
-      if (toolConfig.name === "Gorgias" || toolConfig.name === "Klaviyo") {
-        boost += isStarter ? 12 : 9;
-      }
-      if (toolConfig.category === "Ecommerce Personalization") {
-        boost += isStarter ? 8 : 6;
-      }
-      if (toolConfig.category === "CRM") {
-        boost += isStarter ? 5 : 4;
-      }
-      if (toolConfig.category === "Automation") {
-        boost += 3;
-      }
+    if (toolConfig.category === "Content Studio" && state.mainGoal === "Close More Leads") {
+      boost -= tierName === "starter" ? 3 : 1;
     }
 
-    if (descriptionSignals.bookings) {
-      if (toolConfig.name === "Calendly") {
-        boost += isStarter ? 15 : 10;
-      }
-      if (toolConfig.category === "Scheduling") {
-        boost += isStarter ? 10 : 7;
-      }
-      if (toolConfig.category === "CRM") {
-        boost += isStarter ? 8 : 5;
-      }
-      if (toolConfig.category === "Automation") {
-        boost += 4;
-      }
-    }
-
-    if (descriptionSignals.support) {
-      if (toolConfig.name === "Intercom Fin" || toolConfig.name === "Zendesk AI Agents") {
-        boost += isStarter ? 16 : 12;
-      }
-      if (toolConfig.name === "Gorgias") {
-        boost += isStarter ? 13 : 10;
-      }
-      if (toolConfig.category === "Support") {
-        boost += isStarter ? 10 : 7;
-      }
-      if (toolConfig.category === "CRM") {
-        boost += isStarter ? 5 : 4;
-      }
-    }
-
-    if (descriptionSignals.phone) {
-      if (toolConfig.name === "Dialpad AI") {
-        boost += isStarter ? 16 : 12;
-      }
-      if (toolConfig.category === "Voice / Phone AI") {
-        boost += isStarter ? 10 : 7;
-      }
-      if (toolConfig.category === "Support") {
-        boost += 4;
-      }
-    }
-
-    if (descriptionSignals.meetings) {
-      if (toolConfig.name === "Otter" || toolConfig.name === "Fireflies") {
-        boost += isStarter ? 15 : 10;
-      }
-      if (toolConfig.category === "Meetings") {
-        boost += isStarter ? 10 : 7;
-      }
-      if (toolConfig.category === "Workspace" || toolConfig.category === "Core Assistant") {
-        boost += 3;
-      }
-    }
-
-    if (descriptionSignals.docs || descriptionSignals.internalOps) {
-      if (toolConfig.name === "Notion AI") {
-        boost += isStarter ? 14 : 10;
-      }
-      if (toolConfig.category === "Workspace") {
-        boost += isStarter ? 8 : 6;
-      }
-      if (toolConfig.category === "Project Ops") {
-        boost += isStarter ? 7 : 5;
-      }
-      if (toolConfig.category === "Core Assistant") {
-        boost += 3;
-      }
-    }
-
-    if (descriptionSignals.automation) {
-      if (toolConfig.name === "Zapier") {
-        boost += isStarter ? 14 : 10;
-      }
-      if (toolConfig.category === "Automation") {
-        boost += isStarter ? 10 : 7;
-      }
-      if (toolConfig.category === "Project Ops") {
-        boost += 3;
-      }
-    }
-
-    if (descriptionSignals.content) {
-      if (toolConfig.category === "Content Studio") {
-        boost += isStarter ? 7 : 5;
-      }
-      if (toolConfig.name === "Canva") {
-        boost += isStarter ? 6 : 4;
-      }
-    }
-
-    if (descriptionSignals.design) {
-      if (toolConfig.name === "Canva") {
-        boost += isStarter ? 12 : 9;
-      }
-      if (toolConfig.category === "Design") {
-        boost += isStarter ? 8 : 6;
-      }
-    }
-
-    if (descriptionSignals.research) {
-      if (toolConfig.name === "Perplexity") {
-        boost += isStarter ? 15 : 10;
-      }
-      if (toolConfig.category === "Research") {
-        boost += isStarter ? 9 : 7;
-      }
-      if (toolConfig.category === "Core Assistant") {
-        boost += 3;
-      }
-    }
-
-    if (descriptionSignals.analytics) {
-      if (toolConfig.name === "Power BI Copilot") {
-        boost += isStarter ? 16 : 12;
-      }
-      if (toolConfig.category === "Analytics / BI") {
-        boost += isStarter ? 10 : 7;
-      }
-    }
-
-    if (descriptionSignals.finance) {
-      if (toolConfig.category === "Finance") {
-        boost += isStarter ? 10 : 7;
-      }
-      if (toolConfig.category === "Automation") {
-        boost += 3;
-      }
-    }
-
-    if (descriptionSignals.compliance) {
-      if (toolConfig.name === "Vanta AI") {
-        boost += isStarter ? 16 : 12;
-      }
-      if (toolConfig.category === "Security / Compliance") {
-        boost += isStarter ? 10 : 8;
-      }
-    }
-
-    if (descriptionSignals.hiring) {
-      if (toolConfig.name === "LinkedIn Hiring Assistant") {
-        boost += isStarter ? 16 : 12;
-      }
-      if (toolConfig.category === "Recruiting / HR") {
-        boost += isStarter ? 10 : 7;
-      }
+    if (hasStorefrontSalesIntent(state) && (toolConfig.name === "Shopify Magic" || toolConfig.name === "Rebuy")) {
+      boost += tierName === "starter" ? 8 : 6;
     }
 
     return boost;
@@ -1916,10 +1611,10 @@
             <p class="summary-copy">${escapeHtml(previewCopy)}</p>
           </div>
           <aside class="paid-plan-price-card">
-            <span class="paid-plan-price">$29</span>
+            <span class="paid-plan-price">$39</span>
             <p>Best for solo owners and lean teams that need exact next-tool picks, budget guardrails, and a practical 30-day rollout.</p>
             <div class="paid-plan-action-row">
-              <a class="hero-link hero-link-primary-action" href="${SHOPIFY_BLUEPRINT_PRODUCT_URL}" data-shopify-product-handle="ai-blueprints" data-shopify-cta="buy-growth-preview">Buy Growth Blueprint</a>
+              <a class="hero-link hero-link-primary-action" href="${SHOPIFY_BLUEPRINT_PRODUCT_URL}" data-shopify-product-handle="ai-blueprints" data-shopify-cta="buy-growth-preview">Buy Growth Blueprint ($39)</a>
             </div>
           </aside>
         </div>
@@ -1957,6 +1652,7 @@
               <strong>${escapeHtml(growthSummary.workflowText)}</strong>
             </div>
             <div class="post-quiz-conversion-actions">
+              <a class="secondary-button" href="./second-intake-preview.html">See Growth 2nd Intake</a>
               <a class="secondary-button" href="./sample-growth-blueprint.html"><span class="premium-text premium-text-tight"><span class="premium-star" aria-hidden="true">&#9733;</span><span>See Premium Growth Blueprint Preview</span></span></a>
               <a class="secondary-button" href="./sample-scale-blueprint.html"><span class="premium-text premium-text-tight"><span class="premium-star" aria-hidden="true">&#9733;</span><span>See Premium Scale Blueprint Preview</span></span></a>
               <a class="secondary-button" href="./sample-ai-stack-plans.html"><span class="premium-text premium-text-tight"><span class="premium-star" aria-hidden="true">&#9733;</span><span>See 6 Premium Sample Plans</span></span></a>
@@ -2063,20 +1759,16 @@
             const isLocked = tier.key !== "starter";
             const badgeText = isLocked ? "Premium" : "Free";
             const cardClasses = `stack-tier-card ${escapeHtml(tierSummary.accentClass)}${isLocked ? " stack-tier-locked" : ""}`;
-            const lockedPrice = tier.key === "growth" ? "$29" : "$59";
+            const lockedPrice = tier.key === "growth" ? "$39" : "$99";
             const lockedTitle = tier.key === "growth"
-              ? "Unlock Growth Blueprint"
-              : "Unlock Scale Blueprint";
+              ? "Unlock Growth Blueprint ($39)"
+              : "Unlock Scale Blueprint ($99)";
             const lockedHeading = tier.key === "growth"
               ? "Choose the right next stack and rollout"
               : "Turn the stack into an AI operating system";
-            const lockedCtaHref = SHOPIFY_BLUEPRINT_UNLOCK_VARIANT_URL;
-            const lockedPreviewHref = tier.key === "growth"
-              ? "./sample-growth-blueprint.html"
-              : "./sample-scale-blueprint.html";
-            const lockedPreviewText = tier.key === "growth"
-              ? "See Premium Growth Blueprint Preview"
-              : "See Premium Scale Blueprint Preview";
+            const lockedCtaHref = tier.key === "growth"
+              ? SHOPIFY_BLUEPRINT_PRODUCT_URL
+              : SHOPIFY_BLUEPRINT_PRODUCT_URL;
             const lockedTierNote = tier.key === "advanced"
               ? "Includes everything in Growth Blueprint"
               : "";
@@ -2144,7 +1836,6 @@
                         ${lockedPoints.map((point) => `<li>${escapeHtml(point)}</li>`).join("")}
                       </ul>
                       <div class="stack-tier-overlay-actions">
-                        <a class="secondary-button stack-tier-preview-cta" href="${escapeHtml(lockedPreviewHref)}"><span class="premium-text premium-text-tight"><span class="premium-star" aria-hidden="true">&#9733;</span><span>${escapeHtml(lockedPreviewText)}</span></span></a>
                         <a class="hero-link stack-tier-locked-cta" href="${escapeHtml(lockedCtaHref)}" data-shopify-product-handle="ai-blueprints" data-shopify-cta="locked-tier-buy">${escapeHtml(lockedTitle)}</a>
                       </div>
                     </div>

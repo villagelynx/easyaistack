@@ -7,7 +7,7 @@
   <meta name="description" content="Complete the Scale Blueprint intake and generate a printable AI tools operating blueprint report.">
   <meta name="robots" content="noindex, nofollow">
   <link rel="icon" type="image/svg+xml" href="./favicon.svg?v=20260422-1">
-  <link rel="stylesheet" href="./styles.css?v=20260424-3">
+  <link rel="stylesheet" href="./styles.css?v=20260424-4">
 </head>
 <body>
   <main class="page-shell">
@@ -38,10 +38,6 @@
       <p class="hero-copy">
         Use this when you need automation, ownership, KPI tracking, and a stronger operating layer beyond simple tool selection.
       </p>
-      <div class="hero-actions">
-        <a class="hero-link secondary-hero-link" href="./sample-scale-blueprint.html">See Scale Preview</a>
-        <a class="hero-link secondary-hero-link" href="./sample-growth-blueprint.html">See Growth Preview</a>
-      </div>
     </section>
 
     <section class="results-panel standalone-panel no-print">
@@ -55,17 +51,11 @@
 
       <form id="blueprintIntakeForm" class="inline-form-grid fulfillment-form-grid" novalidate>
         <div class="fulfillment-form-heading fulfillment-field-full">
-          <p class="eyebrow">Blueprint Tier</p>
           <h3>Scale Blueprint</h3>
           <p class="summary-copy">Automation + ownership + scale logic for teams with more workflow complexity.</p>
         </div>
 
         <input type="hidden" name="blueprintTier" value="Scale Blueprint">
-
-        <div class="field">
-          <label for="blueprintTierDisplay">Blueprint Tier</label>
-          <input id="blueprintTierDisplay" class="text-input" type="text" value="Scale Blueprint" disabled>
-        </div>
 
         <div class="field">
           <label for="businessName">Business Name</label>
@@ -362,8 +352,8 @@
         </div>
 
         <div class="field fulfillment-field-full">
-          <label for="mainPlatforms">Main Platforms or Channels</label>
-          <input id="mainPlatforms" class="text-input" type="text" name="mainPlatforms" placeholder="Shopify, LinkedIn, Meta, phone, email, YouTube">
+          <label for="mainPlatforms">Other Platforms or Channels (optional)</label>
+          <input id="mainPlatforms" class="text-input" type="text" name="mainPlatforms" placeholder="Email, phone, WhatsApp, Square, Outlook, etc.">
         </div>
 
         <div class="field">
@@ -405,17 +395,33 @@
 
         <div class="field">
           <label for="weeklyLeadVolume">Leads or New Inquiries Per Week</label>
-          <input id="weeklyLeadVolume" class="text-input" type="text" name="weeklyLeadVolume" placeholder="About 5, 20+, or highly seasonal">
+          <select id="weeklyLeadVolume" name="weeklyLeadVolume">
+            <option value="">Select one</option>
+            <option>About 5</option>
+            <option>20+</option>
+            <option>Highly seasonal</option>
+          </select>
         </div>
 
         <div class="field">
           <label for="weeklyMeetingVolume">Meetings or Calls Per Week</label>
-          <input id="weeklyMeetingVolume" class="text-input" type="text" name="weeklyMeetingVolume" placeholder="0-5, 10+, mostly phone">
+          <select id="weeklyMeetingVolume" name="weeklyMeetingVolume">
+            <option value="">Select one</option>
+            <option>0-5</option>
+            <option>10+</option>
+            <option>Mostly phone</option>
+          </select>
         </div>
 
         <div class="field">
           <label for="weeklySupportVolume">Support Requests Per Week</label>
-          <input id="weeklySupportVolume" class="text-input" type="text" name="weeklySupportVolume" placeholder="Low, medium, high, or not relevant">
+          <select id="weeklySupportVolume" name="weeklySupportVolume">
+            <option value="">Select one</option>
+            <option>Low</option>
+            <option>Medium</option>
+            <option>High</option>
+            <option>Not relevant</option>
+          </select>
         </div>
 
         <div class="field">
@@ -488,8 +494,8 @@
   </main>
 
   <script src="./tool-data.js?v=20260423-1"></script>
-  <script src="./tool-utils.js?v=20260424-3"></script>
-  <script src="./plan-generator.js?v=20260423-6"></script>
-  <script src="./blueprint-intake.js?v=20260424-3"></script>
+  <script src="./tool-utils.js?v=20260424-5"></script>
+  <script src="./plan-generator.js?v=20260424-4"></script>
+  <script src="./blueprint-intake.js?v=20260424-4"></script>
 </body>
 </html>

@@ -32,6 +32,7 @@
   form.noValidate = true;
 
   hydrateMultiCheckboxGroups();
+  hydrateSelectValueClasses();
   attachRecommendedFieldListeners();
 
   form.addEventListener("submit", (event) => {
@@ -90,6 +91,23 @@
         syncMultiCheckboxGroup(group);
       });
       syncMultiCheckboxGroup(group);
+    });
+  }
+
+  function hydrateSelectValueClasses() {
+    const selects = Array.from(form.querySelectorAll("select"));
+    selects.forEach((select) => {
+      if (!(select instanceof HTMLSelectElement)) {
+        return;
+      }
+
+      const sync = () => {
+        const hasValue = Boolean(String(select.value || "").trim());
+        select.classList.toggle("select-has-value", hasValue);
+      };
+
+      select.addEventListener("change", sync);
+      sync();
     });
   }
 
