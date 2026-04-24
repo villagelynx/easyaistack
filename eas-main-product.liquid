@@ -1,0 +1,745 @@
+{% assign current_variant = product.selected_or_first_available_variant %}
+
+<div class="page-shell">
+  <section class="hero">
+    <div class="hero-utility">
+      <div class="utility-links">
+        <a class="hero-link utility-link secondary-hero-link" href="{{ routes.root_url }}">Home</a>
+        <a class="hero-link utility-link" href="#blueprintCheckout">Checkout</a>
+        <a class="hero-link utility-link" href="{{ routes.cart_url }}">Cart</a>
+      </div>
+    </div>
+
+    <div class="paid-plan-page-hero">
+      <div class="paid-plan-page-copy">
+        <p class="eyebrow">{{ section.settings.eyebrow }}</p>
+        <h1>{{ product.title }}</h1>
+        <p class="hero-copy">
+          <strong>Growth Blueprint ($39)</strong> is for business owners who want the right next tools, the right purchase order, and a rollout they can act on this month.
+        </p>
+        <p class="hero-copy">
+          <strong>Scale Blueprint ($99)</strong> is for teams that need more than tool picks and now want automation, ownership, handoffs, KPI tracking, and a stronger operating system behind the stack.
+        </p>
+        <p class="hero-copy">
+          Both start from the free planner plus a second questionnaire. <strong>Both tiers include tool implementation guidance</strong>, and <strong>Scale Blueprint includes everything in Growth Blueprint</strong>, then adds deeper systems and scale logic.
+        </p>
+        {% if product.description != blank %}
+          <div class="summary-copy">{{ product.description }}</div>
+        {% endif %}
+        <div class="hero-guide-example">
+          <a class="hero-guide-button" href="#blueprintCheckout">Buy Growth Blueprint ($39)</a>
+          <a class="hero-guide-button secondary-hero-link" href="#blueprintCheckout">Buy Scale Blueprint ($99)</a>
+        </div>
+      </div>
+
+      <aside class="paid-plan-price-card">
+        <p class="eyebrow">Blueprint Pricing</p>
+        <span class="paid-plan-price">
+          {% if current_variant %}
+            {{ current_variant.price | money }}
+          {% else %}
+            $39 / $99
+          {% endif %}
+        </span>
+        <p>Choose Growth when you need the right next stack, rollout, and setup guidance. Choose Scale when the business now needs automation, ownership, handoffs, KPI tracking, and a deeper operating layer.</p>
+        <div class="stack-summary-grid">
+          <div class="stack-summary-stat">
+            <span class="stack-summary-label">Growth Blueprint</span>
+            <strong>$39</strong>
+            <p>Best for exact tool picks, budget guardrails, and a practical 30-day rollout.</p>
+          </div>
+          <div class="stack-summary-stat">
+            <span class="stack-summary-label">Scale Blueprint</span>
+            <strong>$99</strong>
+            <p>Best for automation, ownership, handoffs, KPI tracking, and a 90-day scale roadmap.</p>
+          </div>
+          <div class="stack-summary-stat">
+            <span class="stack-summary-label">Built From</span>
+            <strong>Planner + 2nd intake</strong>
+            <p>Both tiers use the free planner first, then sharpen the report with follow-up detail.</p>
+          </div>
+          <div class="stack-summary-stat">
+            <span class="stack-summary-label">Delivery</span>
+            <strong>Within 1 business day</strong>
+            <p>Sent after the follow-up questionnaire and intake are reviewed.</p>
+          </div>
+          <div class="stack-summary-stat">
+            <span class="stack-summary-label">Setup Guidance</span>
+            <strong>Included</strong>
+            <p>Step-by-step setup and launch guides for top tools, plus framework guidance for the rest of the stack.</p>
+          </div>
+        </div>
+        <p class="summary-copy">Growth is for the next buying decision and setup path. Scale is for turning the stack into a more durable operating system.</p>
+        <div class="result-link-row">
+          <a class="guide-button" href="#blueprintCheckout">Choose Blueprint</a>
+          {% if section.settings.local_sample_url != blank %}
+            <a class="guide-button" href="{{ section.settings.local_sample_url }}">Sample 1</a>
+          {% endif %}
+          {% if section.settings.agency_sample_url != blank %}
+            <a class="guide-button" href="{{ section.settings.agency_sample_url }}">Sample 2</a>
+          {% endif %}
+        </div>
+      </aside>
+    </div>
+  </section>
+
+  <section class="results-panel standalone-panel">
+    <div class="results-header">
+      <div>
+        <p class="eyebrow">How It Gets More Precise</p>
+        <h2>Why the blueprints are more than the free planner output</h2>
+      </div>
+    </div>
+
+    <div class="action-card-grid">
+      <article class="action-card">
+        <p class="eyebrow">Layer 1</p>
+        <h3>The free planner narrows the field</h3>
+        <p class="summary-copy">The planner is still the first step. It filters by business type, bottleneck, budget, channels, integrations, agents, and platform needs so the buyer starts with a smaller, more relevant tool pool.</p>
+      </article>
+
+      <article class="action-card">
+        <p class="eyebrow">Layer 2</p>
+        <h3>The second questionnaire adds decision-level context</h3>
+        <p class="summary-copy">After purchase, the buyer answers a short follow-up questionnaire covering current tools, must-keep systems, implementation owner, admin versus technical setup reality, replace-versus-add spending, workflow risk, and what success should be measured first.</p>
+      </article>
+
+      <article class="action-card">
+        <p class="eyebrow">Layer 3</p>
+        <h3>The blueprint logic turns that into a sharper plan</h3>
+        <p class="summary-copy">That added context improves the report by making the recommendations more realistic: what should launch first, what can wait, what should stay human-reviewed, how to pilot the stack, which tools need setup guidance, and whether the business needs Growth-level guidance or the deeper Scale operating layer.</p>
+      </article>
+    </div>
+  </section>
+
+  <section class="results-panel standalone-panel">
+    <div class="results-header">
+      <div>
+        <p class="eyebrow">Included</p>
+        <h2>What the blueprints include</h2>
+        <p class="summary-copy">Growth Blueprint covers stack selection, buying order, step-by-step setup guidance, and the first rollout. Scale Blueprint keeps those deliverables and goes deeper on systems, automation, ownership, KPI tracking, spend protection, and scale decisions.</p>
+      </div>
+    </div>
+
+    <div class="paid-plan-section-grid">
+      <article class="paid-plan-section-card">
+        <span class="paid-plan-section-label">Deliverable 01</span>
+        <h4>Recommended stack</h4>
+        <ul class="paid-plan-list">
+          <li>Starter, growth, and advanced stack paths</li>
+          <li>Reasoning for why each tool fits the selected business context and second-questionnaire answers</li>
+          <li>Better sequencing so the buyer does not purchase everything at once</li>
+        </ul>
+      </article>
+
+      <article class="paid-plan-section-card">
+        <span class="paid-plan-section-label">Deliverable 02</span>
+        <h4>Budget map</h4>
+        <ul class="paid-plan-list">
+          <li>Starter and fuller monthly ranges</li>
+          <li>Where a lean stack is enough and where upgrades actually matter</li>
+          <li>A simple way to compare good-enough now versus more complete later</li>
+        </ul>
+      </article>
+
+      <article class="paid-plan-section-card">
+        <span class="paid-plan-section-label">Deliverable 03</span>
+        <h4>Tool implementation modules</h4>
+        <ul class="paid-plan-list">
+          <li>Step-by-step setup guides for the highest-leverage tools in the stack</li>
+          <li>Shows step-by-step setup, who owns the setup, what to configure first, how to launch the tool, how to pilot it, and what to measure</li>
+          <li>Uses a structured implementation framework even when a tool is not one of the hand-written setup modules</li>
+        </ul>
+      </article>
+
+      <article class="paid-plan-section-card">
+        <span class="paid-plan-section-label">Deliverable 04</span>
+        <h4>Buy first / second / third</h4>
+        <ul class="paid-plan-list">
+          <li>Shows the exact buying order instead of one giant software list</li>
+          <li>Separates what to buy now, what to add next, and what only belongs in the scale layer</li>
+          <li>Helps the buyer avoid purchasing the whole roadmap at once</li>
+        </ul>
+      </article>
+
+      <article class="paid-plan-section-card">
+        <span class="paid-plan-section-label">Deliverable 05</span>
+        <h4>What not to buy yet</h4>
+        <ul class="paid-plan-list">
+          <li>Trust-building guidance on what to delay even if the tool sounds exciting</li>
+          <li>Protects the buyer from buying advanced automation before the starter workflow works</li>
+          <li>Keeps the stack lean while the first measurable win is still being proven</li>
+        </ul>
+      </article>
+
+      <article class="paid-plan-section-card">
+        <span class="paid-plan-section-label">Deliverable 06</span>
+        <h4>First week checklist</h4>
+        <ul class="paid-plan-list">
+          <li>A practical 7-day setup sequence after purchase</li>
+          <li>Shows what to activate first, who owns it, and what should be tested with real work</li>
+          <li>Makes the blueprint feel more actionable right away</li>
+        </ul>
+      </article>
+    </div>
+  </section>
+
+  <section class="results-panel standalone-panel" id="blueprintCheckout">
+    <div class="results-header">
+      <div>
+        <p class="eyebrow">Checkout + 2nd Intake</p>
+        <h2>Choose the blueprint and complete the intake</h2>
+        <p class="summary-copy">This is the Shopify product form. It captures the blueprint choice and the second intake answers with the order so the final report can be built from real business context instead of a generic template.</p>
+      </div>
+      <div class="results-meta">
+        <p class="results-count results-count-pill">Delivered within 1 business day</p>
+      </div>
+    </div>
+
+    {% form 'product', product, id: 'AiStackPlanProductForm', class: 'eas-product-form' %}
+      {% if form.errors %}
+        <div class="eas-form-errors">
+          {{ form.errors | default_errors }}
+        </div>
+      {% endif %}
+
+      {% if product.has_only_default_variant == false %}
+        <label class="eas-field" for="AiStackPlanVariant">
+          <span>Blueprint option</span>
+          <select id="AiStackPlanVariant" class="eas-input" name="id">
+            {% for variant in product.variants %}
+              <option value="{{ variant.id }}" {% if variant == current_variant %}selected{% endif %}>
+                {{ variant.title }} - {{ variant.price | money }}
+              </option>
+            {% endfor %}
+          </select>
+        </label>
+      {% else %}
+        <input type="hidden" name="id" value="{{ current_variant.id }}">
+      {% endif %}
+
+      <input type="hidden" name="quantity" value="1">
+
+      <fieldset class="eas-form-section">
+        <legend>1. Business identity</legend>
+        <p class="eas-form-section-copy">Use these details on the plan cover so the finished document feels like it was built for the business, not a generic template.</p>
+
+        <div class="eas-field-grid">
+          <label class="eas-field">
+            <span>Business name</span>
+            <input class="eas-input" type="text" name="properties[Business Name]" placeholder="Bluebird Plumbing" required>
+          </label>
+
+          <label class="eas-field">
+            <span>Business type</span>
+            <select class="eas-input" name="properties[Business Type]" required>
+              <option value="">Select one</option>
+              <option>Local Service</option>
+              <option>Agency</option>
+              <option>Consultant</option>
+              <option>Coach</option>
+              <option>Creator</option>
+              <option>Ecommerce</option>
+              <option>Real Estate</option>
+              <option>Legal</option>
+              <option>Medical/Dental</option>
+              <option>SaaS</option>
+            </select>
+          </label>
+
+          <label class="eas-field">
+            <span>Business address (optional)</span>
+            <input class="eas-input" type="text" name="properties[Business Address]" placeholder="123 Main St, Vancouver, BC">
+          </label>
+
+          <label class="eas-field">
+            <span>Business phone (optional)</span>
+            <input class="eas-input" type="text" name="properties[Business Phone]" placeholder="604-555-0199">
+          </label>
+
+          <label class="eas-field eas-field-full">
+            <span>Website or primary URL (optional)</span>
+            <input class="eas-input" type="url" name="properties[Business Website]" placeholder="https://yourbusiness.com">
+          </label>
+        </div>
+      </fieldset>
+
+      <fieldset class="eas-form-section">
+        <legend>2. Team and budget</legend>
+        <p class="eas-form-section-copy">These answers shape the stack size, rollout speed, and how technical the recommendations should be.</p>
+
+        <div class="eas-field-grid">
+          <label class="eas-field">
+            <span>Team size</span>
+            <select class="eas-input" name="properties[Team Size]" required>
+              <option value="">Select one</option>
+              <option>Solo</option>
+              <option>2-5</option>
+              <option>6-20</option>
+              <option>21+</option>
+            </select>
+          </label>
+
+          <label class="eas-field">
+            <span>Monthly budget</span>
+            <select class="eas-input" name="properties[Monthly Budget]">
+              <option value="">Select one</option>
+              <option>Under $100/mo</option>
+              <option>$100-$300/mo</option>
+              <option>$300-$1000/mo</option>
+              <option>$1000+/mo</option>
+            </select>
+          </label>
+
+          <label class="eas-field">
+            <span>Tech comfort</span>
+            <select class="eas-input" name="properties[Tech Comfort]">
+              <option value="">Select one</option>
+              <option>Low</option>
+              <option>Medium</option>
+              <option>High</option>
+            </select>
+          </label>
+
+          <label class="eas-field">
+            <span>Who will implement this?</span>
+            <select class="eas-input" name="properties[Implementation Owner]">
+              <option value="">Select one</option>
+              <option>Owner / founder</option>
+              <option>Admin / office manager</option>
+              <option>Small internal team</option>
+              <option>External freelancer / agency</option>
+            </select>
+          </label>
+        </div>
+      </fieldset>
+
+      <fieldset class="eas-form-section">
+        <legend>3. Planner filters</legend>
+        <p class="eas-form-section-copy">This combines the original planner logic with the paid intake so the blueprints can use the same structured fit signals as the quiz, plus the extra business context below.</p>
+
+        <div class="eas-field-grid">
+          <label class="eas-field">
+            <span>Creator platform</span>
+            <select class="eas-input" name="properties[Creator Platform]">
+              <option value="">Select one</option>
+              <option>All</option>
+              <option>TikTok</option>
+              <option>Instagram</option>
+              <option>YouTube</option>
+            </select>
+          </label>
+
+          <div class="eas-field eas-field-full">
+            <span>Platform / integrations</span>
+            <div class="eas-choice-group" data-eas-multi-field="integrationPlatform">
+              <input type="hidden" name="properties[Platform / Integrations]" value="" data-eas-multi-hidden>
+              <div class="eas-choice-grid eas-choice-grid-compact">
+                <label class="eas-choice-option"><input type="checkbox" value="Shopify" data-eas-multi-option><span>Shopify</span></label>
+                <label class="eas-choice-option"><input type="checkbox" value="LinkedIn" data-eas-multi-option><span>LinkedIn</span></label>
+                <label class="eas-choice-option"><input type="checkbox" value="Meta" data-eas-multi-option><span>Meta</span></label>
+                <label class="eas-choice-option"><input type="checkbox" value="Instagram" data-eas-multi-option><span>Instagram</span></label>
+                <label class="eas-choice-option"><input type="checkbox" value="YouTube" data-eas-multi-option><span>YouTube</span></label>
+                <label class="eas-choice-option"><input type="checkbox" value="TikTok" data-eas-multi-option><span>TikTok</span></label>
+                <label class="eas-choice-option"><input type="checkbox" value="Google Workspace" data-eas-multi-option><span>Google Workspace</span></label>
+                <label class="eas-choice-option"><input type="checkbox" value="Microsoft 365" data-eas-multi-option><span>Microsoft 365</span></label>
+                <label class="eas-choice-option"><input type="checkbox" value="Slack" data-eas-multi-option><span>Slack</span></label>
+                <label class="eas-choice-option"><input type="checkbox" value="HubSpot" data-eas-multi-option><span>HubSpot</span></label>
+                <label class="eas-choice-option"><input type="checkbox" value="Notion" data-eas-multi-option><span>Notion</span></label>
+                <label class="eas-choice-option"><input type="checkbox" value="Calendly" data-eas-multi-option><span>Calendly</span></label>
+              </div>
+            </div>
+          </div>
+
+          <label class="eas-field">
+            <span>Language need</span>
+            <select class="eas-input" name="properties[Language Need]">
+              <option value="">Select one</option>
+              <option>Any</option>
+              <option>Text Translation</option>
+              <option>Multilingual Writing</option>
+              <option>Live Meeting Translation</option>
+              <option>Video Dubbing</option>
+              <option>Subtitles / Localization</option>
+            </select>
+          </label>
+
+          <label class="eas-field">
+            <span>Finance / bookkeeping</span>
+            <select class="eas-input" name="properties[Finance / Bookkeeping]">
+              <option value="">Select one</option>
+              <option>Any</option>
+              <option>Bookkeeping</option>
+              <option>Invoices & Payments</option>
+              <option>Cash Flow Insights</option>
+              <option>Tax / Sales Tax</option>
+            </select>
+          </label>
+
+          <label class="eas-field">
+            <span>Support / chat channel</span>
+            <select class="eas-input" name="properties[Support / Chat Channel]">
+              <option value="">Select one</option>
+              <option>Any</option>
+              <option>Website Chat</option>
+              <option>Email</option>
+              <option>Phone</option>
+              <option>DMs / Social</option>
+              <option>Help Center</option>
+            </select>
+          </label>
+
+          <label class="eas-field">
+            <span>Sales need</span>
+            <select class="eas-input" name="properties[Sales Need]">
+              <option value="">Select one</option>
+              <option>Any</option>
+              <option>Lead Capture</option>
+              <option>Lead Follow-Up</option>
+              <option>Proposal Drafting</option>
+              <option>Pipeline Updates</option>
+            </select>
+          </label>
+
+          <label class="eas-field">
+            <span>Automation need</span>
+            <select class="eas-input" name="properties[Automation Need]">
+              <option value="">Select one</option>
+              <option>Any</option>
+              <option>Not Needed</option>
+              <option>Helpful</option>
+              <option>Essential</option>
+            </select>
+          </label>
+
+          <label class="eas-field">
+            <span>AI agents</span>
+            <select class="eas-input" name="properties[AI Agents]">
+              <option value="">Select one</option>
+              <option>Any</option>
+              <option>Not Needed</option>
+              <option>Helpful</option>
+              <option>Essential</option>
+            </select>
+          </label>
+
+          <label class="eas-field">
+            <span>Meeting notes</span>
+            <select class="eas-input" name="properties[Meeting Notes]">
+              <option value="">Select one</option>
+              <option>Any</option>
+              <option>Not Needed</option>
+              <option>Helpful</option>
+              <option>Essential</option>
+            </select>
+          </label>
+
+          <label class="eas-field">
+            <span>Design & content</span>
+            <select class="eas-input" name="properties[Design & Content]">
+              <option value="">Select one</option>
+              <option>Any</option>
+              <option>Not Needed</option>
+              <option>Helpful</option>
+              <option>Essential</option>
+            </select>
+          </label>
+
+          <label class="eas-field">
+            <span>Cited research</span>
+            <select class="eas-input" name="properties[Cited Research]">
+              <option value="">Select one</option>
+              <option>Any</option>
+              <option>Not Needed</option>
+              <option>Helpful</option>
+              <option>Essential</option>
+            </select>
+          </label>
+
+          <label class="eas-field">
+            <span>Internal knowledge base</span>
+            <select class="eas-input" name="properties[Internal Knowledge Base]">
+              <option value="">Select one</option>
+              <option>Any</option>
+              <option>Not Needed</option>
+              <option>Helpful</option>
+              <option>Essential</option>
+            </select>
+          </label>
+
+          <label class="eas-field">
+            <span>Lead volume</span>
+            <select class="eas-input" name="properties[Lead Volume]">
+              <option value="">Select one</option>
+              <option>Any</option>
+              <option>Low</option>
+              <option>Medium</option>
+              <option>High</option>
+            </select>
+          </label>
+
+          <label class="eas-field">
+            <span>Content volume</span>
+            <select class="eas-input" name="properties[Content Volume]">
+              <option value="">Select one</option>
+              <option>Any</option>
+              <option>Low</option>
+              <option>Medium</option>
+              <option>High</option>
+            </select>
+          </label>
+
+          <label class="eas-field">
+            <span>Meeting volume</span>
+            <select class="eas-input" name="properties[Meeting Volume]">
+              <option value="">Select one</option>
+              <option>Any</option>
+              <option>Low</option>
+              <option>Medium</option>
+              <option>High</option>
+            </select>
+          </label>
+        </div>
+      </fieldset>
+
+      <fieldset class="eas-form-section">
+        <legend>4. Main business need</legend>
+        <p class="eas-form-section-copy">This is the most important section. It tells the plan what to fix first instead of just recommending a random stack.</p>
+
+        <div class="eas-field-grid">
+          <label class="eas-field">
+            <span>Main bottleneck</span>
+            <select class="eas-input" name="properties[Primary Bottleneck]" required>
+              <option value="">Select one</option>
+              <option>Lead Follow-Up</option>
+              <option>Content Creation</option>
+              <option>Admin Work</option>
+              <option>Customer Support</option>
+            </select>
+          </label>
+
+          <label class="eas-field">
+            <span>Main goal</span>
+            <select class="eas-input" name="properties[Main Goal]" required>
+              <option value="">Select one</option>
+              <option>Save Time</option>
+              <option>Close More Leads</option>
+              <option>Create Content Faster</option>
+              <option>Improve Service</option>
+            </select>
+          </label>
+
+          <label class="eas-field eas-field-full">
+            <span>First workflow to fix</span>
+            <input class="eas-input" type="text" name="properties[First Workflow To Fix]" placeholder="Example: new lead -> follow-up -> booking">
+          </label>
+
+          <label class="eas-field eas-field-full">
+            <span>Quick business description</span>
+            <textarea class="eas-input eas-textarea" name="properties[Business Description]" rows="4" placeholder="Describe the business, what is slowing it down, and what a better result should look like."></textarea>
+          </label>
+
+          <label class="eas-field">
+            <span>Where should AI help you win customers first?</span>
+            <select class="eas-input" name="properties[Sales Channel Focus]">
+              <option value="">Select one</option>
+              <option>Email list / newsletter</option>
+              <option>Instagram / DMs / social</option>
+              <option>Online store / Shopify / Etsy</option>
+              <option>Bookings / inquiries / commissions</option>
+              <option>In-person / gallery / events</option>
+            </select>
+          </label>
+        </div>
+      </fieldset>
+
+      <fieldset class="eas-form-section">
+        <legend>5. Current stack and operating context</legend>
+        <p class="eas-form-section-copy">These details help the report decide what to keep, what to replace, what not to buy yet, and how hard implementation will really be.</p>
+
+        <div class="eas-field-grid">
+          <label class="eas-field eas-field-full">
+            <span>Current tools</span>
+            <input class="eas-input" type="text" name="properties[Current Tools]" placeholder="Google Workspace, HubSpot, Shopify, Slack">
+          </label>
+
+          <label class="eas-field eas-field-full">
+            <span>Main platforms or channels</span>
+            <input class="eas-input" type="text" name="properties[Main Platforms]" placeholder="Shopify, LinkedIn, Meta, phone, email, YouTube">
+          </label>
+
+          <label class="eas-field">
+            <span>Need to keep current tools?</span>
+            <select class="eas-input" name="properties[Must Keep Current Tools]">
+              <option value="">Select one</option>
+              <option>No</option>
+              <option>Some of them</option>
+              <option>Yes, must keep core systems</option>
+            </select>
+          </label>
+
+          <label class="eas-field">
+            <span>Replace tools or add alongside them?</span>
+            <select class="eas-input" name="properties[Replace vs Add]">
+              <option value="">Select one</option>
+              <option>Prefer replacing where possible</option>
+              <option>Prefer adding to current stack</option>
+              <option>Mixed / depends on the tool</option>
+            </select>
+          </label>
+
+          <label class="eas-field">
+            <span>Already uses Shopify?</span>
+            <select class="eas-input" name="properties[Uses Shopify]">
+              <option value="">Select one</option>
+              <option>No</option>
+              <option>Yes</option>
+            </select>
+          </label>
+
+          <label class="eas-field">
+            <span>Already uses Oracle?</span>
+            <select class="eas-input" name="properties[Uses Oracle]">
+              <option value="">Select one</option>
+              <option>No</option>
+              <option>Yes</option>
+            </select>
+          </label>
+
+          <label class="eas-field">
+            <span>Uses healthcare systems or an EHR?</span>
+            <select class="eas-input" name="properties[Uses Healthcare Systems]">
+              <option value="">Select one</option>
+              <option>No</option>
+              <option>Yes</option>
+            </select>
+          </label>
+
+          <label class="eas-field">
+            <span>Is phone support a major channel?</span>
+            <select class="eas-input" name="properties[Phone Support Priority]">
+              <option value="">Select one</option>
+              <option>Not Important</option>
+              <option>Helpful</option>
+              <option>Major Channel</option>
+            </select>
+          </label>
+        </div>
+      </fieldset>
+
+      <fieldset class="eas-form-section">
+        <legend>6. Risk and delivery</legend>
+        <p class="eas-form-section-copy">Use this to flag privacy, approvals, or anything else that should change the recommendation or rollout pace.</p>
+
+        <div class="eas-field-grid">
+          <label class="eas-field">
+            <span>Compliance or privacy sensitivity</span>
+            <select class="eas-input" name="properties[Compliance Sensitivity]">
+              <option value="">Select one</option>
+              <option>Low</option>
+              <option>Medium</option>
+              <option>High</option>
+            </select>
+          </label>
+
+          <label class="eas-field">
+            <span>Need enterprise-grade security or regulated AI?</span>
+            <select class="eas-input" name="properties[Security / Regulated AI Need]">
+              <option value="">Select one</option>
+              <option>Not Important</option>
+              <option>Helpful</option>
+              <option>Required</option>
+            </select>
+          </label>
+
+          <label class="eas-field">
+            <span>Delivery email</span>
+            <input class="eas-input" type="email" name="properties[Plan Delivery Email]" placeholder="owner@business.com" required>
+          </label>
+        </div>
+
+        <label class="eas-field">
+          <span>Extra notes</span>
+          <textarea class="eas-input eas-textarea" name="properties[Notes]" rows="5" placeholder="Anything that should shape the recommendation, such as approval rules, current pain points, seasonal issues, or tools you already tried."></textarea>
+        </label>
+      </fieldset>
+
+      <div class="result-link-row">
+        <button type="submit" class="guide-button" {% unless product.available %}disabled{% endunless %}>
+          {% if product.available %}
+            Add blueprint to cart
+          {% else %}
+            Currently unavailable
+          {% endif %}
+        </button>
+        <a class="guide-button" href="{{ routes.cart_url }}">View Cart</a>
+      </div>
+
+      {{ form | payment_button }}
+    {% endform %}
+  </section>
+</div>
+
+<script>
+  (function initializeEasyAiStackProductMultiSelect() {
+    var form = document.getElementById("AiStackPlanProductForm");
+    if (!form) {
+      return;
+    }
+
+    form.querySelectorAll("[data-eas-multi-field]").forEach(function (group) {
+      var hiddenInput = group.querySelector("[data-eas-multi-hidden]");
+      var checkboxes = Array.from(group.querySelectorAll("[data-eas-multi-option]"));
+      if (!hiddenInput || !checkboxes.length) {
+        return;
+      }
+
+      function syncFromHidden() {
+        var selectedValues = new Set(String(hiddenInput.value || "")
+          .split(",")
+          .map(function (value) { return value.trim(); })
+          .filter(Boolean));
+
+        checkboxes.forEach(function (checkbox) {
+          checkbox.checked = selectedValues.has(checkbox.value);
+        });
+      }
+
+      function syncFromCheckboxes() {
+        hiddenInput.value = checkboxes
+          .filter(function (checkbox) { return checkbox.checked; })
+          .map(function (checkbox) { return checkbox.value; })
+          .join(", ");
+      }
+
+      syncFromHidden();
+      checkboxes.forEach(function (checkbox) {
+        checkbox.addEventListener("change", syncFromCheckboxes);
+      });
+    });
+  }());
+</script>
+
+{% schema %}
+{
+  "name": "EasyAIStack main product",
+  "settings": [
+    {
+      "type": "text",
+      "id": "eyebrow",
+      "label": "Eyebrow",
+      "default": "Blueprint Options"
+    },
+    {
+      "type": "url",
+      "id": "local_sample_url",
+      "label": "Local service sample plan URL"
+    },
+    {
+      "type": "url",
+      "id": "agency_sample_url",
+      "label": "Agency sample plan URL"
+    }
+  ]
+}
+{% endschema %}

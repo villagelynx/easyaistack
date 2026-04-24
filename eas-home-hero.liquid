@@ -1,0 +1,177 @@
+{% assign blueprint_product_url = '/products/ai-blueprints' %}
+
+<section class="hero hero-home hero-home-ai-bg">
+  <div class="mobile-hero-toolbar">
+    <div class="mobile-hero-toolbar-row">
+      <div class="mobile-hero-brand-lockup">
+        <div class="mobile-hero-brand-mark" aria-hidden="true">
+          <img src="{{ 'favicon.svg' | asset_url }}" alt="" width="34" height="34">
+        </div>
+        <p class="mobile-hero-brand">
+          <span class="brand-word brand-word-easy">Easy</span><span class="brand-word brand-word-ai">AI</span><span class="brand-word brand-word-stack">Stack</span>
+        </p>
+      </div>
+      <details class="mobile-hero-menu">
+        <summary class="mobile-hero-menu-button">Menu</summary>
+        <div class="mobile-hero-menu-panel">
+          <a class="mobile-hero-menu-link" href="{{ routes.root_url }}">Home</a>
+          <a class="mobile-hero-menu-link" href="#plannerSection">Start Quiz</a>
+          <a class="mobile-hero-menu-link" href="#toolCategoryMapSection">Browse Tools</a>
+          <a class="mobile-hero-menu-link" href="#toolCategoryMapSection">A-Z Tool Database</a>
+          <details class="mobile-hero-submenu">
+            <summary class="mobile-hero-submenu-button">Blueprint AI Stacks</summary>
+            <div class="mobile-hero-submenu-panel">
+              <a class="mobile-hero-menu-link" href="{{ blueprint_product_url }}">Buy Blueprints</a>
+              <a class="mobile-hero-menu-link" href="{{ routes.cart_url }}">View Cart</a>
+              <a class="mobile-hero-menu-link" href="#resultsSection">Free Starter Stack</a>
+              <a class="mobile-hero-menu-link" href="#toolCategoryMapSection">Tool Categories</a>
+            </div>
+          </details>
+          <a class="mobile-hero-menu-link" href="{{ blueprint_product_url }}">Buy Blueprints</a>
+          <a class="mobile-hero-menu-link" href="{{ routes.cart_url }}">View Cart</a>
+        </div>
+      </details>
+    </div>
+  </div>
+
+  <div class="hero-heading-row">
+    <div class="hero-heading-copy">
+      <div class="brand-lockup">
+        <div class="brand-mark" aria-hidden="true">
+          <img src="{{ 'favicon.svg' | asset_url }}" alt="" width="42" height="42">
+        </div>
+        <p class="eyebrow site-wordmark">
+          <span class="brand-word brand-word-easy">Easy</span><span class="brand-word brand-word-ai">AI</span><span class="brand-word brand-word-stack">Stack</span>
+        </p>
+      </div>
+
+      <p class="hero-home-kicker">AI stack decisions for owner-led businesses</p>
+      <h1>Get a clear <span class="hero-highlight">AI stack recommendation</span> in minutes, not a giant tool list.</h1>
+      <div class="hero-problem-strip">
+        <p class="hero-problem-lead">Why so many businesses still haven&rsquo;t adopted AI</p>
+        <div class="hero-problem-pills" aria-label="Common reasons people delay AI adoption">
+          <span class="hero-problem-pill">&ldquo;I don&rsquo;t know where to start&rdquo;</span>
+          <span class="hero-problem-separator" aria-hidden="true">&bull;</span>
+          <span class="hero-problem-pill">Too many tools</span>
+          <span class="hero-problem-separator" aria-hidden="true">&bull;</span>
+          <span class="hero-problem-pill">Too many buzzwords</span>
+          <span class="hero-problem-separator" aria-hidden="true">&bull;</span>
+          <span class="hero-problem-pill">No clear first step</span>
+        </div>
+      </div>
+      <div class="hero-actions">
+        <p class="hero-cta-support">Get your Free Starter Stack</p>
+        <div class="hero-actions-primary">
+          <a class="hero-link hero-link-primary-action" href="#plannerSection">Start Quiz</a>
+          <a id="browseToolDatabaseLink" class="hero-link" href="#toolCategoryMapSection">Browse Tools</a>
+          <a class="hero-link" href="#toolCategoryMapSection">A-Z Tool Database</a>
+          <details class="hero-dropdown">
+            <summary class="hero-link hero-dropdown-button">Blueprint AI Stacks</summary>
+            <div class="hero-dropdown-panel hero-dropdown-panel-wide">
+              <a class="hero-dropdown-link" href="{{ blueprint_product_url }}">Buy Blueprints</a>
+              <a class="hero-dropdown-link" href="#resultsSection">Free Starter Stack</a>
+              <a class="hero-dropdown-link" href="#toolCategoryMapSection">All Tool Categories</a>
+              <a class="hero-dropdown-link" href="{{ routes.cart_url }}">View Cart</a>
+            </div>
+          </details>
+          <details class="hero-dropdown">
+            <summary class="hero-link hero-dropdown-button">Explore</summary>
+            <div class="hero-dropdown-panel hero-dropdown-panel-wide">
+              <a class="hero-dropdown-link" href="#plannerSection">Start Quiz</a>
+              <a class="hero-dropdown-link" href="#resultsSection">Free Starter Stack</a>
+              <a class="hero-dropdown-link" href="#toolCategoryMapSection">Browse Categories</a>
+              <a class="hero-dropdown-link" href="{{ blueprint_product_url }}">Buy Blueprints</a>
+            </div>
+          </details>
+        </div>
+      </div>
+      <div class="hero-guide-example">
+        <a class="hero-guide-button secondary-hero-link" href="{{ blueprint_product_url }}"><span class="premium-text premium-text-tight"><span class="premium-star" aria-hidden="true">&#9733;</span><span>Buy Growth Blueprint ($39)</span></span></a>
+        <a class="hero-guide-button secondary-hero-link" href="{{ blueprint_product_url }}"><span class="premium-text premium-text-tight"><span class="premium-star" aria-hidden="true">&#9733;</span><span>Buy Scale Blueprint ($99)</span></span></a>
+      </div>
+      <p class="mobile-hero-intro">Take a short quiz, then review <span id="heroToolCountMobile">0</span> practical AI tools ranked by business fit so you can choose faster and spend smarter.</p>
+    </div>
+  </div>
+</section>
+
+<section id="plannerSection" class="quiz-results-shell">
+  <section class="results-panel quiz-panel" id="quizPanel">
+    <div class="results-header">
+      <div>
+        <div class="quiz-heading-row">
+          <span class="quiz-title-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" focusable="false" aria-hidden="true">
+              <rect x="6" y="4.5" width="12" height="15.5" rx="2.5" fill="none" stroke="currentColor" stroke-width="1.8"/>
+              <rect x="9" y="2.8" width="6" height="3.6" rx="1.6" fill="currentColor"/>
+              <path d="M9 10h6M9 13.5h6M9 17h4.5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+            </svg>
+          </span>
+          <h2 id="quizHeading">Answer five fast questions to get free Starter Stack</h2>
+        </div>
+      </div>
+      <div class="results-meta">
+        <p id="quizStepStatus" class="results-count results-count-pill">Step 1 of 5</p>
+      </div>
+    </div>
+    <div id="quizProgress" class="quiz-progress" aria-hidden="true"></div>
+    <div id="quizQuestionCard" class="quiz-question-card"></div>
+    <div id="quizAnswerSummary" class="tag-grid quiz-answer-summary" hidden></div>
+    <div class="quiz-panel-actions">
+      <button id="quizBackButton" class="secondary-button" type="button">Back</button>
+      <button id="resetButton" class="secondary-button" type="button">Start Over</button>
+      <a class="guide-button" href="#toolCategoryMapSection">Browse Tool Categories</a>
+    </div>
+  </section>
+
+  <section class="results-panel quiz-results-panel" id="resultsSection">
+    <div class="results-header">
+      <div>
+        <h2 id="resultsTitle">Free Starter Stack</h2>
+      </div>
+      <div class="results-meta" hidden>
+        <p id="databaseCount" class="results-count results-count-pill results-count-database">0 tools in database</p>
+        <p id="resultsCount" class="results-count results-count-pill">5-step quiz</p>
+      </div>
+    </div>
+
+    <p id="quizResultsLead" class="summary-copy quiz-results-lead" hidden>Starter Stack is free. Growth Blueprint and Scale Blueprint are previewed here and fully unlocked inside the premium report.</p>
+    <div id="stackSummary"></div>
+    <div class="results-list home-results-list quiz-starter-results" id="resultsList"></div>
+    <div id="paidPlanPreview"></div>
+  </section>
+</section>
+
+<section class="results-panel tool-category-map-panel" id="toolCategoryMapSection">
+  <div class="results-header">
+    <div>
+      <p class="eyebrow">Tool Categories</p>
+      <h2>All AI tools by category and color</h2>
+      <p id="toolCategorySummary" class="summary-copy tool-category-summary">Browse every tool on EasyAIStack grouped by category.</p>
+    </div>
+    <div class="results-meta">
+      <a class="guide-button" href="#plannerSection">Back to Quiz</a>
+    </div>
+  </div>
+  <div id="toolCategoryPalette"></div>
+</section>
+
+<footer class="site-footer">
+  <div class="site-footer-inner">
+    <p class="site-footer-copy">EasyAIStack helps small businesses choose AI tools based on real workflows, clear priorities, and smarter rollout timing instead of hype.</p>
+    <nav class="site-footer-links" aria-label="Footer">
+      <a class="site-footer-link" href="{{ routes.root_url }}">Home</a>
+      <a class="site-footer-link" href="#plannerSection">Start Quiz</a>
+      <a class="site-footer-link" href="#resultsSection">Free Starter Stack</a>
+      <a class="site-footer-link" href="#toolCategoryMapSection">Tool Categories</a>
+      <a class="site-footer-link" href="{{ blueprint_product_url }}">Buy Blueprints</a>
+      <a class="site-footer-link" href="{{ routes.cart_url }}">Cart</a>
+    </nav>
+  </div>
+</footer>
+
+{% schema %}
+{
+  "name": "Original homepage experience",
+  "settings": []
+}
+{% endschema %}
