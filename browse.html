@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Browse AI Tools | EasyAIStack</title>
+  <meta name="description" content="Browse the EasyAIStack database by collection, role, and search phrase to compare practical AI tools for small businesses.">
+  <link rel="icon" type="image/svg+xml" href="./favicon.svg?v=20260422-1">
+  <link rel="stylesheet" href="./styles.css?v=20260423-45">
+</head>
+<body>
+  <main class="page-shell">
+    <section class="hero">
+            <div class="hero-utility">
+        <div class="utility-links">
+          <a class="hero-link utility-link secondary-hero-link" href="./index.html">Home</a>
+          <a class="hero-link utility-link" href="./browse.html?view=all">Browse Tools</a>
+          <a class="hero-link utility-link" href="./ai-stack-plan.html">AI Stack Plan</a>
+        </div>
+        <a class="utility-brand-homepage" href="./index.html" aria-label="EasyAIStack Home">
+          <div class="brand-lockup utility-brand-homepage-lockup">
+            <div class="brand-mark" aria-hidden="true">
+              <img src="./favicon.svg?v=20260422-1" alt="" width="42" height="42">
+            </div>
+            <div class="brand-text-lockup">
+              <p class="eyebrow site-wordmark">
+                <span class="brand-word brand-word-easy">Easy</span><span class="brand-word brand-word-ai">AI</span><span class="brand-word brand-word-stack">Stack</span>
+              </p>
+              <p class="hero-home-kicker">We help business owners choose and adopt the right mix of AI tools.</p>
+            </div>
+          </div>
+        </a>
+      </div>
+      <p class="eyebrow">Tool Database</p>
+      <h1 id="browseTitle">All AI Tools</h1>
+      <p id="browseCopy" class="hero-copy">
+        Browse the full EasyAIStack database, grouped by role so small businesses can compare tools before they commit to a stack.
+      </p>
+      <div class="hero-actions">
+        <a class="hero-link" href="./browse.html?view=service">Local Service</a>
+        <a class="hero-link" href="./browse.html?view=agency">Agencies</a>
+        <a class="hero-link" href="./browse.html?view=consultant">Consultants</a>
+        <a class="hero-link" href="./browse.html?view=creator">Creators</a>
+        <details class="hero-dropdown">
+          <summary class="hero-link hero-dropdown-button">More Views</summary>
+          <div class="hero-dropdown-panel">
+            <a class="hero-dropdown-link" href="./browse.html?view=all">All Tools</a>
+            <a class="hero-dropdown-link" href="./browse.html?view=solo">Solo Teams</a>
+            <a class="hero-dropdown-link" href="./browse.html?view=automation">Automation Tools</a>
+            <a class="hero-dropdown-link" href="./browse.html?view=meetings">Meeting Tools</a>
+            <a class="hero-dropdown-link" href="./browse.html?view=content">Content Tools</a>
+            <a class="hero-dropdown-link" href="./browse.html?view=support">Support Tools</a>      </div>
+        </details>
+        <a class="hero-link" href="./ai-stack-plan.html">AI Stack Plan</a>
+        <a class="hero-link" href="./instructions.html">How It Works</a>
+        <a class="hero-link" href="./compare-tools.html">Compare Tools</a>
+        <form class="hero-search hero-search-inline" action="./browse.html" method="get" data-browse-search-form="true">
+          <input type="hidden" name="view" value="all">
+          <input id="browseSearchInput" class="search-input" type="search" name="q" placeholder="Search tools by name">
+          <button class="secondary-button compact-button search-submit-button" type="submit">Go</button>
+        </form>
+      </div>
+    </section>
+
+    <section class="results-panel standalone-panel">
+      <div class="results-header">
+        <div>
+          <p class="eyebrow">Browse Results</p>
+          <h2 id="browseHeading">AI Tools</h2>
+        </div>
+        <div class="results-meta">
+          <p id="browseCount" class="results-count">0 tools</p>
+          <p id="browseDatabaseCount" class="results-count">0 tools in database</p>
+        </div>
+      </div>
+
+      <div class="results-list" id="browseResultsList"></div>
+    </section>
+
+    <section class="results-panel standalone-panel">
+      <div class="results-header">
+        <div>
+          <p class="eyebrow">Next Step</p>
+          <h2>Turn tool comparison into a clearer buying path</h2>
+        </div>
+      </div>
+
+      <div class="action-card-grid">
+        <article class="action-card">
+          <p class="eyebrow">Planner First</p>
+          <h3>Use the filters when you want more opinionated recommendations</h3>
+          <p class="summary-copy">The database is useful for comparison. The planner is better when the business already knows its bottleneck, budget, and workload constraints.</p>
+          <div class="result-link-row">
+            <a class="guide-button" href="./index.html">Run the Planner</a>
+            <a class="guide-button" href="./compare-tools.html">Compare Tools</a>      </div>
+        </article>
+
+        <article class="action-card">
+          <p class="eyebrow">Paid Step</p>
+          <h3>Use sample plans before you sell the $29 offer</h3>
+          <p class="summary-copy">Sample plans make the paid product easier to understand by showing budget logic, rollout timing, and workflow priorities in a real format.</p>
+          <div class="result-link-row">
+            <a class="guide-button" href="./sample-ai-stack-plans.html">View Sample Plans</a>
+            <a class="guide-button" href="./ai-stack-plan.html">See the $29 Plan</a>      </div>
+        </article>
+      </div>
+    </section>
+
+    <footer class="site-footer">
+      <div class="site-footer-inner">
+        <p class="site-footer-copy">Use the database to compare tools by role first, then come back to EasyAIStack when you want a more opinionated stack recommendation.</p>
+        <nav class="site-footer-links" aria-label="Footer">
+          <a class="site-footer-link" href="./instructions.html#about">About</a>
+          <a class="site-footer-link" href="./instructions.html#stack">Stack Model</a>
+          <a class="site-footer-link" href="./instructions.html#pricing">Pricing Notes</a>
+          <a class="site-footer-link" href="./ai-stack-plan.html">AI Stack Plan</a>
+          <a class="site-footer-link" href="./compare-tools.html">Compare Tools</a>
+          <a class="site-footer-link" href="./platform-integrations.html">Platform Integrations</a>
+          <a class="site-footer-link" href="./sample-ai-stack-plans.html">Sample Plans</a>
+          <a class="site-footer-link" href="./articles.html">Articles</a>
+          <a class="site-footer-link" href="./instructions.html#contact">Contact</a>
+        </nav>
+      </div>
+    </footer>
+  </main>
+
+  <script src="./tool-data.js?v=20260423-1"></script>
+  <script src="./tool-utils.js?v=20260423-13"></script>
+  <script src="./compare-tools.js?v=20260422-1"></script>
+  <script src="./browse.js?v=20260422-16"></script>
+</body>
+</html>

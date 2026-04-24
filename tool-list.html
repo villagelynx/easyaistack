@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>A-Z AI Tool Database | EasyAIStack</title>
+  <meta name="description" content="Browse every EasyAIStack tool in one simple database view, either alphabetically or by category, then click through to each tool detail page when you want more context.">
+  <link rel="icon" type="image/svg+xml" href="./favicon.svg?v=20260422-1">
+  <link rel="stylesheet" href="./styles.css?v=20260423-45">
+</head>
+<body>
+  <main class="page-shell">
+    <section class="hero">
+            <div class="hero-utility">
+        <div class="utility-links">
+          <a class="hero-link utility-link secondary-hero-link" href="./index.html">Home</a>
+          <a class="hero-link utility-link" href="./browse.html?view=all">Browse Tools</a>
+          <a class="hero-link utility-link" href="./ai-stack-plan.html">AI Stack Plan</a>
+        </div>
+        <a class="utility-brand-homepage" href="./index.html" aria-label="EasyAIStack Home">
+          <div class="brand-lockup utility-brand-homepage-lockup">
+            <div class="brand-mark" aria-hidden="true">
+              <img src="./favicon.svg?v=20260422-1" alt="" width="42" height="42">
+            </div>
+            <div class="brand-text-lockup">
+              <p class="eyebrow site-wordmark">
+                <span class="brand-word brand-word-easy">Easy</span><span class="brand-word brand-word-ai">AI</span><span class="brand-word brand-word-stack">Stack</span>
+              </p>
+              <p class="hero-home-kicker">We help business owners choose and adopt the right mix of AI tools.</p>
+            </div>
+          </div>
+        </a>
+      </div>
+      <p class="eyebrow">A-Z Tool Database</p>
+      <h1>Browse every AI tool in one simple master database.</h1>
+      <p class="hero-copy">
+        This page is the fast skim version of EasyAIStack. Use the alphabetical view to jump by letter, or switch to category view when you want to browse tools by function first.
+      </p>
+      <div class="hero-actions">
+        <a class="hero-link" href="./index.html#plannerSection">Run the Planner</a>
+        <a class="hero-link" href="./browse.html?view=all">Browse by Collection</a>
+        <a class="hero-link" href="./compare-tools.html">Compare Tools</a>
+        <a class="hero-link" href="./tool-list.html?letter=A">Start with A</a>      </div>
+    </section>
+
+    <section class="results-panel standalone-panel">
+      <div class="results-header">
+        <div>
+          <p class="eyebrow">Master List</p>
+          <h2 id="masterToolHeading">A-Z AI Tool Database</h2>
+          <p id="masterToolIntro" class="summary-copy">Every EasyAIStack tool, arranged alphabetically.</p>
+        </div>
+        <div class="results-meta">
+          <p id="masterToolCount" class="results-count results-count-pill">0 tools shown</p>
+          <p id="masterToolDatabaseCount" class="results-count results-count-pill results-count-database">0 tools in database</p>
+        </div>
+      </div>
+
+      <div id="masterViewBar" class="results-lane-strip master-view-strip" role="toolbar" aria-label="Choose how to browse the tool database">
+        <button id="masterViewAlphabetical" class="alpha-filter-button is-active" type="button" data-master-view="alphabetical" aria-pressed="true">Alphabetical</button>
+        <button id="masterViewCategory" class="alpha-filter-button" type="button" data-master-view="category" aria-pressed="false">By Category</button>
+      </div>
+      <div id="alphaFilterBar" class="alpha-filter-bar" role="toolbar" aria-label="Filter tools by letter"></div>
+      <div id="masterToolSections" class="master-tool-sections"></div>
+    </section>
+
+    <section class="results-panel standalone-panel">
+      <div class="results-header">
+        <div>
+          <p class="eyebrow">Next Step</p>
+          <h2>Use the list to skim, then switch to the planner for recommendations</h2>
+        </div>
+      </div>
+
+      <div class="action-card-grid">
+        <article class="action-card">
+          <p class="eyebrow">Fast Comparison</p>
+          <h3>Use the A-Z list when you already know the tool name</h3>
+          <p class="summary-copy">This page is best for quick scanning. If you already know you want to compare ChatGPT, Claude, HubSpot, or Shopify tools, this is the fastest route.</p>
+          <div class="result-link-row">
+            <a class="guide-button" href="./browse.html?view=all">Browse Database</a>
+            <a class="guide-button" href="./compare-tools.html">Compare Tools</a>      </div>
+        </article>
+
+        <article class="action-card">
+          <p class="eyebrow">Better Fit</p>
+          <h3>Use the planner when you want the site to narrow the field for you</h3>
+          <p class="summary-copy">The master list is intentionally simple. The planner is still the better path when you want the tools ranked by business type, bottleneck, budget, and platform fit.</p>
+          <div class="result-link-row">
+            <a class="guide-button" href="./index.html#plannerSection">Run the Planner</a>
+            <a class="guide-button" href="./ai-stack-plan.html">See the $29 Plan</a>      </div>
+        </article>
+      </div>
+    </section>
+
+    <footer class="site-footer">
+      <div class="site-footer-inner">
+        <p class="site-footer-copy">Use the master list when you want a fast alphabetical skim, then come back to EasyAIStack when you want a more opinionated recommendation.</p>
+        <nav class="site-footer-links" aria-label="Footer">
+          <a class="site-footer-link" href="./index.html">Home</a>
+          <a class="site-footer-link" href="./browse.html?view=all">Browse Tools</a>
+          <a class="site-footer-link" href="./compare-tools.html">Compare Tools</a>
+          <a class="site-footer-link" href="./tool-list.html">A-Z Tool Database</a>
+          <a class="site-footer-link" href="./platform-integrations.html">Platform Integrations</a>
+          <a class="site-footer-link" href="./sample-ai-stack-plans.html">Sample Plans</a>
+          <a class="site-footer-link" href="./articles.html">Articles</a>
+          <a class="site-footer-link" href="./instructions.html">How It Works</a>
+        </nav>
+      </div>
+    </footer>
+  </main>
+
+  <script src="./tool-data.js?v=20260423-1"></script>
+  <script src="./tool-utils.js?v=20260423-13"></script>
+  <script src="./compare-tools.js?v=20260422-1"></script>
+  <script src="./tool-list.js?v=20260423-1"></script>
+</body>
+</html>

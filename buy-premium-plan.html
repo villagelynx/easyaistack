@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Buy Blueprint | EasyAIStack</title>
+  <meta name="description" content="Go to the EasyAIStack Shopify product page to buy Growth Blueprint or Scale Blueprint, including setup guidance and implementation modules.">
+  <link rel="icon" type="image/svg+xml" href="./favicon.svg?v=20260422-1">
+  <link rel="stylesheet" href="./styles.css?v=20260423-45">
+</head>
+<body>
+  <main class="page-shell">
+    <section class="hero">
+            <div class="hero-utility">
+        <div class="utility-links">
+          <a class="hero-link utility-link secondary-hero-link" href="./index.html">Home</a>
+          <a class="hero-link utility-link" href="./browse.html?view=all">Browse Tools</a>
+          <a class="hero-link utility-link" href="./ai-stack-plan.html">AI Stack Plan</a>
+        </div>
+        <a class="utility-brand-homepage" href="./index.html" aria-label="EasyAIStack Home">
+          <div class="brand-lockup utility-brand-homepage-lockup">
+            <div class="brand-mark" aria-hidden="true">
+              <img src="./favicon.svg?v=20260422-1" alt="" width="42" height="42">
+            </div>
+            <div class="brand-text-lockup">
+              <p class="eyebrow site-wordmark">
+                <span class="brand-word brand-word-easy">Easy</span><span class="brand-word brand-word-ai">AI</span><span class="brand-word brand-word-stack">Stack</span>
+              </p>
+              <p class="hero-home-kicker">We help business owners choose and adopt the right mix of AI tools.</p>
+            </div>
+          </div>
+        </a>
+      </div>
+      <p class="eyebrow premium-text"><span class="premium-star" aria-hidden="true">&#9733;</span><span>Blueprint Checkout</span><span class="premium-star" aria-hidden="true">&#9733;</span></p>
+      <h1 id="buyPremiumHeading">Buy Growth Blueprint.</h1>
+      <p id="buyPremiumCopy" class="hero-copy">This page sends buyers to the live Shopify product for your blueprint offer.</p>
+      <p class="summary-copy">The paid blueprints include exact tool picks, rollout guidance, and implementation modules that show how to set up the highest-leverage tools in the stack.</p>
+      <div class="hero-guide-example">
+        <a id="buyPremiumButton" class="hero-guide-button" href="https://easyaistack.com/products/ai-blueprints" data-shopify-product-handle="ai-blueprints" data-shopify-cta="buy-plan">Go to Growth Blueprint Checkout</a>
+        <a class="hero-guide-button secondary-hero-link" href="./ai-stack-plan.html">View Blueprint Overview</a>      </div>
+    </section>
+
+    <section class="results-panel standalone-panel">
+      <div class="results-header">
+        <div>
+          <p class="eyebrow">Checkout Note</p>
+          <h2>What this button is doing</h2>
+        </div>
+      </div>
+      <div class="action-card-grid">
+        <article class="action-card">
+          <p class="eyebrow">Live Shopify Store</p>
+          <h3>Uses the native product path</h3>
+          <p class="summary-copy">The blueprint product now lives at <strong>https://easyaistack.com/products/ai-blueprints</strong> so buyers can go straight from this button to the product page.</p>
+        </article>
+        <article class="action-card">
+          <p class="eyebrow">Local Preview</p>
+          <h3>Preview mode cannot complete checkout</h3>
+          <p class="summary-copy">If you are opening the site locally from a file path, this page will stay here as a bridge because checkout only works once the site is live on Shopify.</p>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <script>
+    (function redirectToShopifyProduct() {
+      var params = new URLSearchParams(window.location.search);
+      var tier = params.get("tier");
+      var copyNode = document.getElementById("buyPremiumCopy");
+      var headingNode = document.getElementById("buyPremiumHeading");
+      var buttonNode = document.getElementById("buyPremiumButton");
+      if (!copyNode) {
+        return;
+      }
+
+      var tierCopy = tier === "scale-blueprint"
+        ? {
+            heading: "Buy Scale Blueprint.",
+            button: "Go to Scale Blueprint Checkout",
+            live: "Redirecting to the live Shopify product page for Scale Blueprint.",
+            local: "You are previewing the site locally. On the live Shopify site, this button opens the AI Blueprints product so buyers can purchase Scale Blueprint."
+          }
+        : {
+            heading: "Buy Growth Blueprint.",
+            button: "Go to Growth Blueprint Checkout",
+            live: "Redirecting to the live Shopify product page for Growth Blueprint.",
+            local: "You are previewing the site locally. On the live Shopify site, this button opens the AI Blueprints product so buyers can purchase Growth Blueprint."
+          };
+
+      if (headingNode) {
+        headingNode.textContent = tierCopy.heading;
+      }
+
+      if (buttonNode) {
+        buttonNode.textContent = tierCopy.button;
+      }
+
+      if (window.location.protocol !== "file:") {
+        copyNode.textContent = tierCopy.live;
+        window.location.replace("https://easyaistack.com/products/ai-blueprints");
+        return;
+      }
+
+      copyNode.textContent = tierCopy.local;
+    }());
+  </script>
+</body>
+</html>

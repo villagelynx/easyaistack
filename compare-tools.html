@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Compare AI Tools | EasyAIStack</title>
+  <meta name="description" content="Compare up to 3 EasyAIStack tools side by side by setup, budget, time to value, platform fit, AI agent fit, and best first use case.">
+  <link rel="icon" type="image/svg+xml" href="./favicon.svg?v=20260422-1">
+  <link rel="stylesheet" href="./styles.css?v=20260423-45">
+</head>
+<body class="compare-page">
+  <main class="page-shell">
+    <section class="hero">
+            <div class="hero-utility">
+        <div class="utility-links">
+          <a class="hero-link utility-link secondary-hero-link" href="./index.html">Home</a>
+          <a class="hero-link utility-link" href="./browse.html?view=all">Browse Tools</a>
+          <a class="hero-link utility-link" href="./ai-stack-plan.html">AI Stack Plan</a>
+        </div>
+        <a class="utility-brand-homepage" href="./index.html" aria-label="EasyAIStack Home">
+          <div class="brand-lockup utility-brand-homepage-lockup">
+            <div class="brand-mark" aria-hidden="true">
+              <img src="./favicon.svg?v=20260422-1" alt="" width="42" height="42">
+            </div>
+            <div class="brand-text-lockup">
+              <p class="eyebrow site-wordmark">
+                <span class="brand-word brand-word-easy">Easy</span><span class="brand-word brand-word-ai">AI</span><span class="brand-word brand-word-stack">Stack</span>
+              </p>
+              <p class="hero-home-kicker">We help business owners choose and adopt the right mix of AI tools.</p>
+            </div>
+          </div>
+        </a>
+      </div>
+      <p class="eyebrow">Free Compare AI Tools</p>
+      <h1>Compare up to 3 AI tools side by side.</h1>
+      <p class="hero-copy">Users are not limited to one category. Same-category comparisons are cleaner when you want an apples-to-apples choice. Mixed-category comparisons are useful when you are deciding which stack role or workflow layer matters first.</p>
+      <div class="hero-actions">
+        <a class="hero-link" href="./browse.html?view=all">Browse Tool Database</a>
+        <a class="hero-link" href="./index.html#plannerSection">Run the Planner</a>
+        <a class="hero-link" href="./ai-stack-plan.html">View $29 Plan Overview</a>      </div>
+    </section>
+
+    <section class="results-panel standalone-panel">
+      <div class="results-header">
+        <div>
+          <p class="eyebrow">Comparison Builder</p>
+          <h2>Choose your 2 or 3 tools</h2>
+        </div>
+        <div class="results-meta">
+          <p id="compareCount" class="results-count">0 of 3 selected</p>
+          <p class="results-count"><span id="compareCountBadge">0</span> in comparison</p>
+        </div>
+      </div>
+
+      <form id="compareBuilderForm" class="compare-builder-grid">
+        <article class="paid-plan-section-card">
+          <span class="paid-plan-section-label">Tool 1</span>
+          <label class="field">
+            <span>Select the first tool</span>
+            <select class="filter-select" data-compare-slot="0"></select>
+          </label>
+          <button class="secondary-button compact-button" type="button" data-remove-slot="0">Clear Slot</button>
+        </article>
+
+        <article class="paid-plan-section-card">
+          <span class="paid-plan-section-label">Tool 2</span>
+          <label class="field">
+            <span>Select the second tool</span>
+            <select class="filter-select" data-compare-slot="1"></select>
+          </label>
+          <button class="secondary-button compact-button" type="button" data-remove-slot="1">Clear Slot</button>
+        </article>
+
+        <article class="paid-plan-section-card">
+          <span class="paid-plan-section-label">Tool 3</span>
+          <label class="field">
+            <span>Select the third tool</span>
+            <select class="filter-select" data-compare-slot="2"></select>
+          </label>
+          <button class="secondary-button compact-button" type="button" data-remove-slot="2">Clear Slot</button>
+        </article>
+
+        <div class="result-link-row">
+          <button class="secondary-button" type="button" data-compare-clear="true">Clear Comparison</button>
+        </div>
+      </form>
+    </section>
+
+    <section class="results-panel standalone-panel">
+      <div id="compareSummary"></div>
+    </section>
+
+    <section class="results-panel standalone-panel">
+      <div class="results-header">
+        <div>
+          <p class="eyebrow">Comparison View</p>
+          <h2 id="compareTableHeading">Choose at least 2 tools</h2>
+        </div>
+      </div>
+
+      <div id="compareNote"></div>
+      <div id="compareTableMount"></div>
+    </section>
+
+    <footer class="site-footer">
+      <div class="site-footer-inner">
+        <p class="site-footer-copy">Use the comparison tool to narrow finalists, then use the planner or paid plan when you want a recommendation instead of just a table.</p>
+        <nav class="site-footer-links" aria-label="Footer">
+          <a class="site-footer-link" href="./index.html">Home</a>
+          <a class="site-footer-link" href="./browse.html?view=all">Browse Tools</a>
+          <a class="site-footer-link" href="./compare-tools.html">Compare Tools</a>
+          <a class="site-footer-link" href="./ai-stack-plan.html">AI Stack Plan</a>
+          <a class="site-footer-link" href="./articles.html">Articles</a>
+        </nav>
+      </div>
+    </footer>
+  </main>
+
+  <script src="./tool-data.js?v=20260423-1"></script>
+  <script src="./tool-utils.js?v=20260423-13"></script>
+  <script src="./compare-tools.js?v=20260422-1"></script>
+  <script src="./compare-tools-page.js?v=20260423-1"></script>
+</body>
+</html>

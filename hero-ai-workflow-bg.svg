@@ -1,0 +1,126 @@
+<svg width="1600" height="620" viewBox="0 0 1600 620" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="1600" y1="0" x2="980" y2="620" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#0A2347"/>
+      <stop offset="1" stop-color="#123B9C"/>
+    </linearGradient>
+    <linearGradient id="tealCard" x1="0" y1="0" x2="360" y2="220" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#31B89A"/>
+      <stop offset="1" stop-color="#1F7F73"/>
+    </linearGradient>
+    <linearGradient id="blueCard" x1="0" y1="0" x2="340" y2="220" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#3D88FF"/>
+      <stop offset="1" stop-color="#1F4DA8"/>
+    </linearGradient>
+    <linearGradient id="greenCard" x1="0" y1="0" x2="340" y2="220" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#86CF52"/>
+      <stop offset="1" stop-color="#427C30"/>
+    </linearGradient>
+    <linearGradient id="orangeCard" x1="0" y1="0" x2="340" y2="220" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#F59A33"/>
+      <stop offset="1" stop-color="#D3641D"/>
+    </linearGradient>
+    <linearGradient id="lineGlow" x1="930" y1="150" x2="1415" y2="450" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#6CE0C6" stop-opacity="0.9"/>
+      <stop offset="0.5" stop-color="#7DB7FF" stop-opacity="0.7"/>
+      <stop offset="1" stop-color="#FFD46A" stop-opacity="0.75"/>
+    </linearGradient>
+    <filter id="softBlur" x="-80" y="-80" width="1760" height="780" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feGaussianBlur stdDeviation="18"/>
+    </filter>
+  </defs>
+
+  <rect width="1600" height="620" fill="url(#bg)"/>
+
+  <g opacity="0.18">
+    <path d="M960 30H1555" stroke="white" stroke-width="1"/>
+    <path d="M960 95H1555" stroke="white" stroke-width="1"/>
+    <path d="M960 160H1555" stroke="white" stroke-width="1"/>
+    <path d="M960 225H1555" stroke="white" stroke-width="1"/>
+    <path d="M960 290H1555" stroke="white" stroke-width="1"/>
+    <path d="M960 355H1555" stroke="white" stroke-width="1"/>
+    <path d="M960 420H1555" stroke="white" stroke-width="1"/>
+    <path d="M960 485H1555" stroke="white" stroke-width="1"/>
+    <path d="M960 550H1555" stroke="white" stroke-width="1"/>
+    <path d="M1005 20V590" stroke="white" stroke-width="1"/>
+    <path d="M1070 20V590" stroke="white" stroke-width="1"/>
+    <path d="M1135 20V590" stroke="white" stroke-width="1"/>
+    <path d="M1200 20V590" stroke="white" stroke-width="1"/>
+    <path d="M1265 20V590" stroke="white" stroke-width="1"/>
+    <path d="M1330 20V590" stroke="white" stroke-width="1"/>
+    <path d="M1395 20V590" stroke="white" stroke-width="1"/>
+    <path d="M1460 20V590" stroke="white" stroke-width="1"/>
+  </g>
+
+  <g filter="url(#softBlur)" opacity="0.42">
+    <circle cx="1330" cy="115" r="84" fill="#3D88FF"/>
+    <circle cx="1170" cy="475" r="92" fill="#31B89A"/>
+    <circle cx="1475" cy="410" r="74" fill="#F59A33"/>
+  </g>
+
+  <g opacity="0.9">
+    <path d="M1065 174C1110 174 1124 174 1152 188C1180 202 1196 228 1230 250C1264 272 1286 273 1328 273H1398" stroke="url(#lineGlow)" stroke-width="6" stroke-linecap="round"/>
+    <path d="M1042 392C1084 392 1112 392 1140 376C1176 356 1178 316 1216 300C1248 287 1290 287 1330 287H1424" stroke="url(#lineGlow)" stroke-width="6" stroke-linecap="round"/>
+    <path d="M1158 472C1190 472 1210 472 1237 460C1267 446 1276 420 1302 404C1328 388 1352 388 1398 388" stroke="url(#lineGlow)" stroke-width="6" stroke-linecap="round"/>
+  </g>
+
+  <g>
+    <circle cx="1062" cy="174" r="14" fill="#6CE0C6"/>
+    <circle cx="1398" cy="273" r="14" fill="#FFD46A"/>
+    <circle cx="1042" cy="392" r="14" fill="#7DB7FF"/>
+    <circle cx="1424" cy="287" r="14" fill="#6CE0C6"/>
+    <circle cx="1158" cy="472" r="14" fill="#FFD46A"/>
+    <circle cx="1398" cy="388" r="14" fill="#7DB7FF"/>
+  </g>
+
+  <g transform="translate(980 82)">
+    <rect x="0" y="0" width="408" height="138" rx="28" fill="url(#tealCard)"/>
+    <circle cx="48" cy="48" r="20" fill="white" fill-opacity="0.22"/>
+    <path d="M39 48H57M48 39V57" stroke="white" stroke-width="4" stroke-linecap="round"/>
+    <text x="84" y="56" fill="white" font-family="Segoe UI, Arial, sans-serif" font-size="20" font-weight="700">Starter Stack</text>
+    <text x="84" y="86" fill="white" fill-opacity="0.82" font-family="Segoe UI, Arial, sans-serif" font-size="14" font-weight="600">Fastest AI wins</text>
+    <rect x="28" y="100" width="90" height="12" rx="6" fill="white" fill-opacity="0.24"/>
+    <rect x="126" y="100" width="64" height="12" rx="6" fill="white" fill-opacity="0.24"/>
+    <rect x="198" y="100" width="72" height="12" rx="6" fill="white" fill-opacity="0.24"/>
+  </g>
+
+  <g transform="translate(1128 238)">
+    <rect x="0" y="0" width="344" height="144" rx="28" fill="url(#blueCard)"/>
+    <rect x="30" y="28" width="112" height="88" rx="22" fill="white" fill-opacity="0.12"/>
+    <path d="M54 92L72 72L92 84L117 54" stroke="white" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+    <circle cx="72" cy="72" r="7" fill="white"/>
+    <circle cx="92" cy="84" r="7" fill="white"/>
+    <circle cx="117" cy="54" r="7" fill="white"/>
+    <text x="168" y="54" fill="white" font-family="Segoe UI, Arial, sans-serif" font-size="20" font-weight="700">Growth Blueprint</text>
+    <text x="168" y="84" fill="white" fill-opacity="0.84" font-family="Segoe UI, Arial, sans-serif" font-size="14" font-weight="600">Workflow expansion</text>
+    <rect x="168" y="104" width="78" height="12" rx="6" fill="white" fill-opacity="0.22"/>
+    <rect x="254" y="104" width="56" height="12" rx="6" fill="white" fill-opacity="0.22"/>
+  </g>
+
+  <g transform="translate(1024 430)">
+    <rect x="0" y="0" width="294" height="118" rx="26" fill="url(#orangeCard)"/>
+    <rect x="28" y="26" width="56" height="56" rx="18" fill="white" fill-opacity="0.14"/>
+    <path d="M46 64H66M56 54V74" stroke="white" stroke-width="4" stroke-linecap="round"/>
+    <text x="106" y="50" fill="white" font-family="Segoe UI, Arial, sans-serif" font-size="19" font-weight="700">Automation Path</text>
+    <text x="106" y="78" fill="white" fill-opacity="0.84" font-family="Segoe UI, Arial, sans-serif" font-size="14" font-weight="600">Connected execution</text>
+    <rect x="106" y="92" width="80" height="10" rx="5" fill="white" fill-opacity="0.22"/>
+    <rect x="194" y="92" width="58" height="10" rx="5" fill="white" fill-opacity="0.22"/>
+  </g>
+
+  <g transform="translate(1328 406)">
+    <rect x="0" y="0" width="190" height="136" rx="24" fill="url(#greenCard)"/>
+    <text x="28" y="42" fill="white" font-family="Segoe UI, Arial, sans-serif" font-size="16" font-weight="700">Plan Progress</text>
+    <rect x="28" y="58" width="134" height="10" rx="5" fill="white" fill-opacity="0.18"/>
+    <rect x="28" y="58" width="98" height="10" rx="5" fill="#FFD46A"/>
+    <text x="28" y="88" fill="white" fill-opacity="0.84" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="600">Tools matched</text>
+    <text x="138" y="88" fill="white" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="700">84</text>
+    <text x="28" y="110" fill="white" fill-opacity="0.84" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="600">Blueprint depth</text>
+    <text x="126" y="110" fill="white" font-family="Segoe UI, Arial, sans-serif" font-size="12" font-weight="700">8-12 pages</text>
+  </g>
+
+  <g opacity="0.14">
+    <circle cx="1022" cy="310" r="126" stroke="white" stroke-width="2"/>
+    <circle cx="1022" cy="310" r="92" stroke="white" stroke-width="2"/>
+    <circle cx="1022" cy="310" r="58" stroke="white" stroke-width="2"/>
+  </g>
+</svg>
