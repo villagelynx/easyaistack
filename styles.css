@@ -992,7 +992,7 @@ h1 {
 
 .hero-home .hero-cta-support {
   margin: 0 0 10px;
-  color: var(--green-dark);
+  color: #b5831c;
   font-size: 0.98rem;
   font-weight: 700;
   letter-spacing: -0.01em;
@@ -1176,17 +1176,17 @@ h1 {
 }
 
 .hero-home .hero-link-primary-action {
-  background: linear-gradient(135deg, var(--green), var(--green-dark));
-  color: #ffffff;
-  box-shadow: 0 12px 24px rgba(32, 72, 49, 0.24);
+  background: linear-gradient(180deg, #f2cf63, #d9a93a);
+  color: #24301f;
+  box-shadow: 0 12px 24px rgba(181, 131, 28, 0.24);
   margin-left: 6px;
   margin-right: 14px;
 }
 
 .hero-home .hero-link-primary-action:hover,
 .hero-home .hero-link-primary-action:focus-visible {
-  background: linear-gradient(135deg, #328958, #225f3c);
-  color: #ffffff;
+  background: linear-gradient(180deg, #f6d974, #ddb146);
+  color: #24301f;
 }
 
 .hero-dropdown {
