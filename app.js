@@ -511,6 +511,7 @@
             <button
               class="quiz-choice-button${isSelected ? " is-selected" : ""}"
               type="button"
+              aria-pressed="${isSelected ? "true" : "false"}"
               data-quiz-choice="${data.escapeHtml(choice.value)}"
               data-quiz-step-index="${currentQuizStep}"
             >

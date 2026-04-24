@@ -1714,6 +1714,7 @@ h1 {
 }
 
 .quiz-choice-button {
+  position: relative;
   display: grid;
   gap: 8px;
   min-height: 108px;
@@ -1758,15 +1759,32 @@ h1 {
 }
 
 .quiz-choice-button.is-selected {
-  background: linear-gradient(135deg, rgba(255, 244, 201, 0.98), rgba(252, 226, 147, 0.96));
-  border-color: rgba(210, 163, 54, 0.34);
-  box-shadow: 0 16px 30px rgba(201, 156, 53, 0.16);
+  background: linear-gradient(135deg, rgba(229, 242, 228, 0.98), rgba(207, 234, 221, 0.96));
+  border-color: rgba(43, 122, 75, 0.34);
+  box-shadow: 0 16px 30px rgba(43, 122, 75, 0.14);
+}
+
+.quiz-choice-button.is-selected::after {
+  content: "\2713";
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  width: 28px;
+  height: 28px;
+  border-radius: 999px;
+  display: grid;
+  place-items: center;
+  background: rgba(43, 122, 75, 0.14);
+  color: var(--green-dark);
+  font-size: 0.92rem;
+  font-weight: 900;
+  box-shadow: 0 10px 16px rgba(43, 122, 75, 0.12);
 }
 
 .quiz-choice-button.is-selected .quiz-choice-button-index {
   background: rgba(255, 255, 255, 0.9);
-  border-color: rgba(210, 163, 54, 0.24);
-  color: #8b620d;
+  border-color: rgba(43, 122, 75, 0.24);
+  color: var(--green-dark);
 }
 
 .quiz-choice-button-title {
@@ -1967,6 +1985,22 @@ h1 {
   gap: 6px;
 }
 
+.field.is-missing {
+  box-shadow: 0 0 0 3px rgba(217, 169, 58, 0.18);
+  border-radius: 18px;
+}
+
+.field.is-missing label {
+  color: rgba(139, 106, 20, 0.95);
+}
+
+.field.is-missing select,
+.field.is-missing .text-input,
+.field.is-missing .text-area {
+  border-color: rgba(217, 169, 58, 0.6);
+  background: rgba(255, 232, 155, 0.35);
+}
+
 .field label {
   font-size: 0.84rem;
   color: var(--muted);
@@ -2024,13 +2058,13 @@ h1 {
 
 .filter-checkbox-option:hover {
   transform: translateY(-1px);
-  box-shadow: 0 8px 18px rgba(18, 59, 156, 0.08);
+  box-shadow: 0 8px 18px rgba(43, 122, 75, 0.1);
 }
 
 .filter-checkbox-option.is-active {
-  background: rgba(226, 236, 255, 0.96);
-  border-color: rgba(18, 59, 156, 0.22);
-  box-shadow: 0 10px 20px rgba(18, 59, 156, 0.1);
+  background: rgba(229, 242, 228, 0.96);
+  border-color: rgba(43, 122, 75, 0.22);
+  box-shadow: 0 10px 20px rgba(43, 122, 75, 0.1);
 }
 
 .filter-checkbox-input {
@@ -2043,7 +2077,7 @@ h1 {
   width: 16px;
   height: 16px;
   margin: 0;
-  accent-color: var(--action-blue-dark);
+  accent-color: var(--green-dark);
   cursor: pointer;
 }
 
